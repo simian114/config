@@ -205,7 +205,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_ADJUST] = LAYOUT( \
   _______, LCAG(KC_LEFT), C(KC_UP), LCAG(KC_RIGHT), _______, _______,                         _______, _______, _______,KC_F11, KC_F12, KC_BSLS,\
   _______, C(KC_LEFT),  C(KC_DOWN),  C(KC_RIGHT), _______, _______,                           KC_ACL0,  KC_ACL1,  KC_MS_U,  KC_ACL2, _______, _______, \
-  _______, RAG(KC_LEFT), LSA(KC_LEFT), RAG(KC_RIGHT), _______,   _______,                     KC_WH_L,  KC_MS_L,  KC_MS_D,  KC_MS_R, KC_WH_R,  _______, \
+  _______, RAG(KC_LEFT), LSA(KC_LEFT), RAG(KC_RIGHT), HYPR(KC_F),   _______,                     KC_WH_L,  KC_MS_L,  KC_MS_D,  KC_MS_R, KC_WH_R,  _______, \
   _______, _______, _______, _______, _______, _______,       _______,   _______,  _______,   KC_WH_U,  KC_WH_D,  _______,  _______, _______, \
                                         _______,    _______, _______, _______,                _______,  KC_BTN1,  KC_BTN2,  _______\
 ),
