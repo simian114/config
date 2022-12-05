@@ -1,3 +1,12 @@
+# 사용법
+1. 키 설정 후 `make clean && make lily58:simian114 && qmk compile -kb lily58 -km simian114` 로 hex 파일 생성
+    - `ls -l | grep simian114` 로 hex 생성되었는지 확인.
+2. [`qmk toolbox`](https://github.com/qmk/qmk_toolbox) 설치 후 열기
+3. qmk-toolbox 에서 1번에서 만든 hex 파일 오픈 후 키보드 연결.
+4. 전원버튼 꾹 누루면 플래싱 가능한 상태가 됨. 이 때 플래싱 눌러주면 끝
+    - 스플릿 키보드면 양쪽 따로 해줘야함.
+
+
 # Quantum Mechanical Keyboard Firmware
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
