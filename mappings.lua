@@ -44,7 +44,7 @@ M.nvterm = {
       "Toggle floating term",
     },
 
-    ["<leader>th"] = {
+    ["<leader>tt"] = {
       function()
         require("nvterm.terminal").toggle "horizontal"
       end,
@@ -68,7 +68,7 @@ M.nvterm = {
       "Toggle floating term",
     },
 
-    ["<leader>th"] = {
+    ["<leader>tt"] = {
       function()
         require("nvterm.terminal").toggle "horizontal"
       end,
@@ -89,7 +89,7 @@ M.telescope = {
 
   n = {
     -- pick a hidden term
-    ["<leader>tt"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
+    ["<leader>tp"] = { "<cmd> Telescope terms <CR>", "Pick hidden term" },
   },
 }
 
