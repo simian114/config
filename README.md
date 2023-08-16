@@ -11,6 +11,17 @@
 7. eslint 를 제대로 동작하기 위해서는 npm i -g vscode-langservers-extracted 로 eslint 서버 설치해야함 [참고](npm i -g vscode-langservers-extracted)
 8. prettier 도 서버 설치해야함 [참고1](https://github.com/MunifTanjim/prettier.nvim), [참고2](https://github.com/fsouza/prettierd#installation-guide)
 
+
+## custom config 설명
+
+### plugins
+### mapping
+
+## todo
+- 여러 버퍼가 있을 때 `:q` 로 close 하면 current buffer 를 close 하게 함수 짜기
+  - 확인 결과 `:ls` 를 하면 현재 open 되어있는 buffer 의 경우 `%` 가 붙어있음을 확인할 수 있음. 해당 값을 이용해서 어떻게 할 수 있는지 알아보자.
+
+
 ## key mapping
 
 | spacebar is leader key
