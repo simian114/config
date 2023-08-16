@@ -74,6 +74,31 @@ local plugins = {
     end,
   },
 
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   dependencies = {
+  --     -- format & linting
+  --     {
+  --       "jose-elias-alvarez/null-ls.nvim",
+  --       config = function()
+  --         require "custom.configs.null-ls"
+  --       end,
+  --     },
+  --   },
+  --   config = function()
+  --     require "plugins.configs.lspconfig"
+  --     require "custom.configs.lspconfig"
+  --   end, -- Override to setup mason-lspconfig
+  -- },
+  {
+    "nvimdev/lspsaga.nvim",
+    cmd = { "Lspsaga" },
+    config = function ()
+      require('custom.configs.lspsaga')
+    end,
+    lazy = true,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
