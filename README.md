@@ -10,6 +10,11 @@
 6. lua 폴더에서 custom 제거 후 해당 repo clone 후에 이름을 nvim -> custom 으로 변경한다.
 7. eslint 를 제대로 동작하기 위해서는 npm i -g vscode-langservers-extracted 로 eslint 서버 설치해야함 [참고](npm i -g vscode-langservers-extracted)
 8. prettier 도 서버 설치해야함 [참고1](https://github.com/MunifTanjim/prettier.nvim), [참고2](https://github.com/fsouza/prettierd#installation-guide)
+9. cmp.lua 의 mapping 설정에 아래 줄 추가해야함
+  - ```
+    ["<Down>"] = cmp.mapping.select_next_item(),
+    ["<Up>"] = cmp.mapping.select_prev_item(),
+    ```
 
 
 ## custom config 설명
