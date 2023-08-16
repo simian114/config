@@ -4,8 +4,9 @@
 
 1. brew install neovim
 2. [install nerd fonts 설치](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts)
-3. [ripgrep 설치](brew install ripgrep)
+3. [ripgrep 설치](https://github.com/BurntSushi/ripgrep)
 4. [NvChad](https://nvchad.com/docs/quickstart/install) 설치
+5. example config 선택 단계에서 꼭 y 누르기 (N 이 default)
 
 ## key mapping
 
