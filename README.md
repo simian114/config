@@ -19,7 +19,7 @@
 
 ## todo
 - 여러 버퍼가 있을 때 `:q` 로 close 하면 current buffer 를 close 하게 함수 짜기
-  - 확인 결과 `:ls` 를 하면 현재 open 되어있는 buffer 의 경우 `%` 가 붙어있음을 확인할 수 있음. 해당 값을 이용해서 어떻게 할 수 있는지 알아보자.
+  - 확인 결과 `:ls` 를 하면 현재 open 되어있는 buffer 의 경우 `%` 가 붙어있음을 확인할 수 있음. 해당 값을 이용해서 어떻게 할 수 있는지 알아보자.([참고](https://vi.stackexchange.com/a/5485))
 
 
 ## key mapping
