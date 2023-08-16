@@ -93,10 +93,25 @@ local plugins = {
   {
     "nvimdev/lspsaga.nvim",
     cmd = { "Lspsaga" },
-    config = function ()
-      require('custom.configs.lspsaga')
+    config = function()
+      require "custom.configs.lspsaga"
     end,
     lazy = true,
+  },
+  {
+    "mg979/vim-visual-multi",
+    event = "BufRead", -- 이벤트를 설정해줍니다.
+    config = function()
+      vim.g.multi_cursor_use_default_mapping = 0
+      vim.g.multi_cursor_next_key = "<C-n>"
+      vim.g.multi_cursor_prev_key = "<C-p>"
+      vim.g.multi_cursor_skip_key = "<C-x>"
+      vim.g.multi_cursor_quit_key = "<Esc>"
+    end,
+    -- lazy 설정을 false로 변경합니다.
+    -- 이렇게 하면 neovim이 시작될 때 플러그인이 즉시 로드됩니다.
+    -- 만약 이 설정을 주석처리하거나 삭제하면, 이벤트가 발생하기 전까지 플러그인이 로드되지 않습니다.
+    lazy = false,
   },
 
   -- To make a plugin not be loaded
