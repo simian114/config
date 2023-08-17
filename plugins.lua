@@ -50,6 +50,7 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
+    plugins,
   },
   {
     "windwp/nvim-ts-autotag",
@@ -113,7 +114,25 @@ local plugins = {
     -- 만약 이 설정을 주석처리하거나 삭제하면, 이벤트가 발생하기 전까지 플러그인이 로드되지 않습니다.
     lazy = false,
   },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
+  },
 
+  {
+    "kdheepak/lazygit.nvim",
+    event = "VeryLazy",
+    cmd = { "LazyGit" , "LazyGitCurrentFile", "LazyGitConfig" },
+    config = function()
+      require "custom.configs.lazygit"
+    end,
+  },
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

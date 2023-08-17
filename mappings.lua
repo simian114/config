@@ -3,7 +3,7 @@ local M = {}
 
 M.general = {
   n = {
-    [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>h"] = {
       "<cmd> sb <CR>",
       "Horizontal Split",
@@ -17,6 +17,7 @@ M.general = {
     ["<leader>sf"] = { "<cmd> Lspsaga finder <CR>", "floating finder" },
     ["<leader>sg"] = { "<cmd> Lspsaga peek_definition <CR>", "peer definition" },
     ["<leader>sa"] = { "<cmd> Lspsaga code_action <CR>", "peer definition" },
+    ["<leader>gg"] = {"<cmd> LazyGit <CR>", "Open LazyGit"}
   }
 }
 
