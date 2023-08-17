@@ -18,10 +18,16 @@
     ```
 
 
-
 ## custom config 설명
 
 ### plugins
+- autotag
+- vim visual multi
+  - multi cursor
+- nvim surround
+- lazygit
+
+
 ### mapping
 
 ## todo
