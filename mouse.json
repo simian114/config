@@ -55,6 +55,102 @@
           ]
         },
         {
+          "description": "mouse up-left (u)",
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": -768,
+                "y": -768
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse up-right(o)",
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": 768,
+                "y": -768
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse down-right(.)",
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": 768,
+                "y": 768
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse down-left(n)",
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": -768,
+                "y": 768
+              }
+            }
+          ]
+        },
+        {
           "description": "mouse down(k)",
           "type": "basic",
           "from": {
@@ -104,7 +200,7 @@
           "description": "left command n == left click",
           "type": "basic",
           "from": {
-            "key_code": "n",
+            "key_code": "spacebar",
             "modifiers": {
               "mandatory": [
                 "right_command",
@@ -122,10 +218,10 @@
           ]
         },
         {
-          "description": "left command .(period) == right click",
+          "description": "left command '(quote) == right click",
           "type": "basic",
           "from": {
-            "key_code": "period",
+            "key_code": "quote",
             "modifiers": {
               "mandatory": [
                 "right_command",
