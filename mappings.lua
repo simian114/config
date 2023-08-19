@@ -116,7 +116,8 @@ M.lspconfig = {
     ["g."] = {
       function()
         vim.diagnostic.goto_prev { float = { border = "rounded" } }
-        vim.cmd('execute \"normal z."')
+        -- float window 가 꺼져버림
+        -- vim.cmd('execute \"normal z."')
       end,
       "Goto prev buffer",
     },
@@ -124,7 +125,7 @@ M.lspconfig = {
     ["g,"] = {
       function()
         vim.diagnostic.goto_next { float = { border = "rounded" } }
-        vim.cmd('execute \"normal z."')
+        vim.cmd 'execute "normal z."'
       end,
       "Goto next buffer",
     },
