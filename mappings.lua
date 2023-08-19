@@ -17,14 +17,15 @@ M.general = {
     ["<leader>sf"] = { "<cmd> Lspsaga finder <CR>", "floating finder" },
     ["<leader>sg"] = { "<cmd> Lspsaga peek_definition <CR>", "peer definition" },
     ["<leader>sa"] = { "<cmd> Lspsaga code_action <CR>", "peer definition" },
-    ["<leader>gg"] = {"<cmd> LazyGit <CR>", "Open LazyGit"}
-  }
+    ["<leader>gg"] = { "<cmd> LazyGit <CR>", "Open LazyGit" },
+  },
 }
 
 -- more keybinds!
 
 M.nvimtree = {
   n = {
+    ["<leader>E"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
     ["<leader>e"] = {
       function()
         print(vim.bo.filetype)
@@ -125,7 +126,7 @@ M.lspconfig = {
       end,
       "Goto next buffer",
     },
-    ["<leader>ca"] = {"<cmd> Lspsaga code_action <CR>", "code action"}
+    ["<leader>ca"] = { "<cmd> Lspsaga code_action <CR>", "code action" },
   },
 }
 
