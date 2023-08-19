@@ -122,10 +122,10 @@
           ]
         },
         {
-          "description": "left command . == right click",
+          "description": "left command .(period) == right click",
           "type": "basic",
           "from": {
-            "key_code": ".",
+            "key_code": "period",
             "modifiers": {
               "mandatory": [
                 "right_command",
@@ -160,7 +160,7 @@
           "to": [
             {
               "mouse_key": {
-                "horizontal_wheel": -64
+                "horizontal_wheel": 64
               }
             }
           ]
