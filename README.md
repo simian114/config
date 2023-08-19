@@ -12,6 +12,8 @@
   - eslint: npm i -g vscode-langservers-extracted 로 eslint 서버 설치해야함 [참고](npm i -g vscode-langservers-extracted)
   - prettier: [참고1](https://github.com/MunifTanjim/prettier.nvim), [참고2](https://github.com/fsouza/prettierd#installation-guide)
   - tailwindcss
+  - prisma
+    - syntax highlighting 을 위해서는 `TSInstall prisma` 를 해아함
 8. core-mapping 의 <C-c> 주석. saga 에서 사용함
 9. cmp.lua 의 mapping 설정에 아래 줄 추가해야함
   - ```
