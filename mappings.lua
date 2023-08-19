@@ -25,7 +25,7 @@ M.general = {
 
 M.nvimtree = {
   n = {
-    ["<leader>E"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["<leader>b"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
     ["<leader>e"] = {
       function()
         print(vim.bo.filetype)
@@ -116,6 +116,7 @@ M.lspconfig = {
     ["g."] = {
       function()
         vim.diagnostic.goto_prev { float = { border = "rounded" } }
+        vim.cmd('execute \"normal z."')
       end,
       "Goto prev buffer",
     },
@@ -123,6 +124,7 @@ M.lspconfig = {
     ["g,"] = {
       function()
         vim.diagnostic.goto_next { float = { border = "rounded" } }
+        vim.cmd('execute \"normal z."')
       end,
       "Goto next buffer",
     },
