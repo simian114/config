@@ -26,7 +26,7 @@
           "to": [
             {
               "mouse_key": {
-                "x": -2000
+                "x": -1536
               }
             }
           ]
@@ -49,7 +49,7 @@
           "to": [
             {
               "mouse_key": {
-                "y": -2000
+                "y": -1536
               }
             }
           ]
@@ -72,7 +72,7 @@
           "to": [
             {
               "mouse_key": {
-                "y": 2000
+                "y": 1536
               }
             }
           ]
@@ -95,16 +95,16 @@
           "to": [
             {
               "mouse_key": {
-                "x": 2000
+                "x": 1536
               }
             }
           ]
         },
         {
-          "description": "command right command == left click",
+          "description": "left command n == left click",
           "type": "basic",
           "from": {
-            "key_code": "right_command",
+            "key_code": "n",
             "modifiers": {
               "mandatory": [
                 "right_command",
@@ -122,10 +122,10 @@
           ]
         },
         {
-          "description": "command n == right click",
+          "description": "left command . == right click",
           "type": "basic",
           "from": {
-            "key_code": "n",
+            "key_code": ".",
             "modifiers": {
               "mandatory": [
                 "right_command",
@@ -139,6 +139,52 @@
           "to": [
             {
               "pointing_button": "button2"
+            }
+          ]
+        },
+        {
+          "description": "left command + h = scroll left",
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": -64
+              }
+            }
+          ]
+        },
+        {
+          "description": "left command + ; = scroll right",
+          "type": "basic",
+          "from": {
+            "key_code": ";",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": 64
+              }
             }
           ]
         },
