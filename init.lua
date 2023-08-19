@@ -7,4 +7,9 @@
 -- })
 
 
-vim.wo.relativenumber = true
+-- vim.wo.relativenumber = true
+
+
+vim.keymap.set('n', '<S-Up>', "10k z.", { silent = true })
+vim.keymap.set('n', '<S-Down>', "10j z.", { silent = true })
+
