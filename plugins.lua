@@ -124,11 +124,21 @@ local plugins = {
       }
     end,
   },
+  {
+    "f-person/git-blame.nvim",
+    event = "BufRead",
+    config = function()
+      require("gitblame").setup {
+        enabled = true
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
+  },
 
   {
     "kdheepak/lazygit.nvim",
     event = "VeryLazy",
-    cmd = { "LazyGit" , "LazyGitCurrentFile", "LazyGitConfig" },
+    cmd = { "LazyGit", "LazyGitCurrentFile", "LazyGitConfig" },
     config = function()
       require "custom.configs.lazygit"
     end,
