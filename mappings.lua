@@ -15,9 +15,15 @@ M.general = {
     -- saga finder
     ["<leader>ss"] = { "<cmd> w <CR>", "Save file" },
     ["<leader>sf"] = { "<cmd> Lspsaga finder <CR>", "floating finder" },
-    ["<leader>sg"] = { "<cmd> Lspsaga peek_definition <CR>", "peer definition" },
-    ["<leader>sa"] = { "<cmd> Lspsaga code_action <CR>", "peer definition" },
+    ["<leader>sa"] = { "<cmd> Lspsaga code_action <CR>", "code action" },
     ["<leader>gg"] = { "<cmd> LazyGit <CR>", "Open LazyGit" },
+    ["<leader>ra"] = { "<cmd> Lspsaga rename<CR>", "Open LazyGit" },
+    ["gd"] = { "<cmd> Lspsaga goto_definition <CR>", "Goto definition" },
+    ["gD"] = { "<cmd> Lspsaga goto_type_definition <CR>", "Goto definition" },
+    ["gp"] = { "<cmd> Lspsaga peek_definition <CR>", "peek definition" },
+    ["gr"] = { "<cmd> Lspsaga finder <CR>", "fnextind reference" },
+    ["g."] = { "<cmd> Lspsaga diagnostic_jump_next <CR>", "find reference" },
+    ["g,"] = { "<cmd> Lspsaga diagnostic_jump_prev <CR>", "find reference" },
   },
 }
 
@@ -105,7 +111,6 @@ M.lspconfig = {
 
   n = {
     ["gG"] = { "<C-o> <CR>", "Go to prev cursor position" },
-    ["gk"] = { "<cmd> Lspsaga peek_definition <CR>", "peek definition" },
     ["gh"] = {
       function()
         vim.lsp.buf.signature_help()
@@ -113,22 +118,6 @@ M.lspconfig = {
       "LSP signature help",
     },
 
-    ["g."] = {
-      function()
-        vim.diagnostic.goto_prev { float = { border = "rounded" } }
-        -- float window 가 꺼져버림
-        -- vim.cmd('execute \"normal z."')
-      end,
-      "Goto prev buffer",
-    },
-
-    ["g,"] = {
-      function()
-        vim.diagnostic.goto_next { float = { border = "rounded" } }
-        vim.cmd 'execute "normal z."'
-      end,
-      "Goto next buffer",
-    },
     ["<leader>ca"] = { "<cmd> Lspsaga code_action <CR>", "code action" },
   },
 }

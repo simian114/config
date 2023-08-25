@@ -95,9 +95,26 @@ local plugins = {
     "nvimdev/lspsaga.nvim",
     cmd = { "Lspsaga" },
     config = function()
-      require "custom.configs.lspsaga"
+      require("lspsaga").setup {
+        definition = {
+          keys = {
+            edit = "o",
+          },
+        },
+        rename = {
+          auto_save = true,
+        },
+        symbols_in_winbar = {
+          enable = true,
+        },
+      }
     end,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter", -- optional
+      "nvim-tree/nvim-web-devicons", -- optional
+    },
     lazy = true,
+    event = "BufRead",
   },
   {
     "mg979/vim-visual-multi",
@@ -129,7 +146,7 @@ local plugins = {
     event = "BufRead",
     config = function()
       require("gitblame").setup {
-        enabled = true
+        enabled = true,
         -- Configuration here, or leave empty to use defaults
       }
     end,
