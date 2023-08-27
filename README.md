@@ -22,6 +22,16 @@
     ```
 
 
+## nvchad config
+
+### plugins
+
+#### nvim-tree
+- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- [help](https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt) 에서 키 매핑 확인 가능
+
+
+
 ## custom config 설명
 
 ### plugins
