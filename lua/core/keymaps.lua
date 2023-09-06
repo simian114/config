@@ -6,6 +6,11 @@ map("n", "<C-j>", "<C-w>j", { noremap = true, silent = false })
 map("n", "<C-k>", "<C-w>k", { noremap = true, silent = false })
 map("n", "<C-l>", "<C-w>l", { noremap = true, silent = false })
 
+
+-- Go to prev
+map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })
+
+
 -- BufferLine
 map("n", "<A-n>", ":BufferLineCycleNext<cr>", { noremap = true, silent = true })
 map("n", "<A-p>", ":BufferLineCyclePrev<cr>", { noremap = true, silent = true })
@@ -22,3 +27,4 @@ map("n", "<C-s>", '"+P', { noremap = true, silent = false })
 map("i", "kj", "<Esc>", { noremap = true, silent = false })
 map("n", "kj", "<Esc>", { noremap = true, silent = false })
 map("v", "kj", "<Esc>", { noremap = true, silent = false })
+
