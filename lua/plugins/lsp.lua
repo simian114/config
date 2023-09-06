@@ -87,10 +87,7 @@ MasonToolInstaller.setup({
 		{ "pyright" },
 		{ "black" },
 		{ "autopep8" },
-		{ "json-lsp" },
-		{ "prettier" },
-		{ "tsserver"},
-		{ "eslint" }
+		{ "json-lsp" }
 	},
 
 	auto_update = false,

@@ -58,7 +58,7 @@ local mappings = {
 		h = { ":e ~/<cr>", "NvimTreeHome" },
 	},
 	-- Telescope
-	s = {
+	f = {
 		name = "Telescope",
 		f = { ":Telescope find_files theme=ivy<cr>", "Telescope find_files" },
 		w = { ":Telescope current_buffer_fuzzy_find theme=ivy<cr>", "Fuzzy Find in File" },
@@ -68,20 +68,23 @@ local mappings = {
 		b = { ":Telescope buffers theme=ivy<cr>", "Telescope buffers" },
 	},
 	-- Split
+	v = { ":vsplit<cr>", "Split Vertically" },
+		h = { ":split<cr>", "Split Horizontally" },
 	p = {
 		name = "Split",
 		v = { ":vsplit<cr>", "Split Vertically" },
-		h = { ":split<cr>", "Split Vertically" },
+		h = { ":split<cr>", "Split Horizontally" },
 	},
 	-- Terminal
 	t = {
 		t = { ":ToggleTerm<cr>", "Split Below" },
+		h = { ":ToggleTermToggleAll<cr>", "Hide term" },
 		f = { toggle_float, "Floating Terminal" },
 		l = { toggle_lazygit, "LazyGit" },
 	},
 
 	-- Lsp Stuffs
-	l = {
+	s = {
 		name = "LSP",
 		i = { ":LspInfo<cr>", "Connected Language Servers" },
 		k = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
