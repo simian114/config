@@ -41,8 +41,13 @@ local plugins = {
 	{ "norcalli/nvim-colorizer.lua" },
 
 	-- Terminal
-	{ "akinsho/toggleterm.nvim" },
-
+	-- { "akinsho/toggleterm.nvim" },
+	{
+		"NvChad/nvterm",
+		config = function()
+			require("nvterm").setup()
+		end,
+	},
 	-- Indent Line
 	{ "lukas-reineke/indent-blankline.nvim" },
 
@@ -147,15 +152,42 @@ local plugins = {
 
 	-- nvim surround
 	{
-    "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup {
-        -- Configuration here, or leave empty to use defaults
-      }
-    end,
-  },
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	},
+	-- vim-visual-multi
+	{
+		"mg979/vim-visual-multi",
+		event = "BufRead", -- 이벤트를 설정해줍니다.
+		config = function()
+			vim.g.multi_cursor_use_default_mapping = 0
+			vim.g.multi_cursor_next_key = "<C-n>"
+			vim.g.multi_cursor_prev_key = "<C-p>"
+			vim.g.multi_cursor_skip_key = "<C-x>"
+			vim.g.multi_cursor_quit_key = "<Esc>"
+		end,
+		-- lazy 설정을 false로 변경합니다.
+		-- 이렇게 하면 neovim이 시작될 때 플러그인이 즉시 로드됩니다.
+		-- 만약 이 설정을 주석처리하거나 삭제하면, 이벤트가 발생하기 전까지 플러그인이 로드되지 않습니다.
+		lazy = false,
+	},
+	{
+		"kdheepak/lazygit.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("telescope").load_extension("lazygit")
+		end,
+	},
+	--
 	-- ==============================================================
 } -- end of plugin line
 
