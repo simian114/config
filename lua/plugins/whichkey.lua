@@ -50,10 +50,11 @@ local mappings = {
 	-- Basic Operations
 	-- q = { ":q<cr>", "Quit File" },
 	-- Q = { ":q!<cr>", "Force Quit File" },
-	w = { ":w<cr>", "Save File" },
-	W = { ":w!<cr>", "Force Save File" },
+	-- w = { ":w<cr>", "Save File" },
+	-- W = { ":w!<cr>", "Force Save File" },
 
 	-- Buffers
+	q = { ":bdelete<cr>", "Close Buffer" },
 	x = { ":bdelete<cr>", "Close Buffer" },
 
 	Ec = { ":e ~/.config/nvim<cr>", "Edit Configs" },
@@ -120,7 +121,34 @@ local mappings = {
 	},
 	g = {
 		g = { ":LazyGit<CR>", "Open LazyGit" },
+		b = {
+			function()
+				require("gitsigns").blame_line({ full = true })
+			end,
+			"git blame",
+		},
+		d = {
+			function()
+				require("gitsigns").diffthis()
+			end,
+			"diff this",
+		},
+		r = {
+			function()
+				require("gitsigns").reset_hunk()
+			end,
+			"reset hunk",
+		},
+		s = {
+			function()
+				require("gitsigns").stage_hunk()
+			end,
+			"reset hunk",
+		},
+		v = { "<cmd>DiffviewOpen <CR>", "open git diff" },
+		c = { "<cmd>DiffviewClose <CR>", "close git diff" },
 	},
+
 	-- Tagbar for function list
 	T = {
 		f = { ":TagbarToggle<cr>", "Functions List Tagbar" },

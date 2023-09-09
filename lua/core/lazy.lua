@@ -55,9 +55,41 @@ local plugins = {
 	{
 		"lewis6991/gitsigns.nvim",
 		config = function()
-			require("gitsigns").setup({
+			local opts = {
 				current_line_blame = true,
-			})
+				signs = {
+					add = { text = "▌", show_count = true },
+					change = { text = "▌", show_count = true },
+					delete = { text = "▐", show_count = true },
+					topdelete = { text = "▛", show_count = true },
+					changedelete = { text = "▚", show_count = true },
+				},
+				sign_priority = 10,
+				count_chars = {
+					[1] = "",
+					[2] = "₂",
+					[3] = "₃",
+					[4] = "₄",
+					[5] = "₅",
+					[6] = "₆",
+					[7] = "₇",
+					[8] = "₈",
+					[9] = "₉",
+					["+"] = "₊",
+				},
+				preview_config = {
+					border = "single",
+					style = "minimal",
+					relative = "cursor",
+					row = 0,
+					col = 1,
+				},
+				yadm = { enable = false },
+			}
+			require("gitsigns").setup(opts)
+			-- require("gitsigns").setup({
+			-- 	current_line_blame = true,
+			-- })
 		end,
 	},
 
@@ -177,17 +209,9 @@ local plugins = {
 		-- 만약 이 설정을 주석처리하거나 삭제하면, 이벤트가 발생하기 전까지 플러그인이 로드되지 않습니다.
 		lazy = false,
 	},
-	-- {
-	-- 	"kdheepak/lazygit.nvim",
-	-- 	dependencies = {
-	-- 		"nvim-telescope/telescope.nvim",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 	},
-	-- 	config = function()
-	-- 		require("telescope").load_extension("lazygit")
-	-- 	end,
-	-- },
-	--
+	-- git diff
+
+	{ "sindrets/diffview.nvim" },
 	-- ==============================================================
 } -- end of plugin line
 
