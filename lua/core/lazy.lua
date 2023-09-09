@@ -177,16 +177,16 @@ local plugins = {
 		-- 만약 이 설정을 주석처리하거나 삭제하면, 이벤트가 발생하기 전까지 플러그인이 로드되지 않습니다.
 		lazy = false,
 	},
-	{
-		"kdheepak/lazygit.nvim",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-			"nvim-lua/plenary.nvim",
-		},
-		config = function()
-			require("telescope").load_extension("lazygit")
-		end,
-	},
+	-- {
+	-- 	"kdheepak/lazygit.nvim",
+	-- 	dependencies = {
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 	},
+	-- 	config = function()
+	-- 		require("telescope").load_extension("lazygit")
+	-- 	end,
+	-- },
 	--
 	-- ==============================================================
 } -- end of plugin line

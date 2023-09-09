@@ -36,11 +36,14 @@ map("i", "¡", "<C-\\> <CR>", { noremap = true, silent = false })
 
 map("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = false })
 map("n", "<S-Tab>", ":bprev<CR>", { noremap = true, silent = false })
-
 -- saga
 
 map("n", "gd", "<cmd> Lspsaga goto_definition <CR>", { noremap = true, silent = false })
 map("n", "gD", "<cmd> Lspsaga goto_type_definition <CR>", { noremap = true, silent = false })
 map("n", "gp", "<cmd> Lspsaga peek_definition <CR>", { noremap = true, silent = false })
 map("n", "gr", "<cmd> Lspsaga finder <CR>", { noremap = true, silent = false })
-map("t", "<ESC>", [[<C-\><C-n>]], { noremap = true })
+map("n", "g.", "<cmd> Lspsaga diagnostic_jump_next <CR>", { noremap = true, silent = false })
+map("n", "gm", "<cmd> Lspsaga diagnostic_jump_prev <CR>", { noremap = true, silent = false })
+map("n", "K", "<cmd> Lspsaga hover_doc <CR>", { noremap = true, silent = false })
+
+map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })

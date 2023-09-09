@@ -5,27 +5,21 @@ if not installed then
 	return
 end
 
--- requring plugin
--- local installed, ToggleTerm = pcall(require, "toggleterm.terminal")
--- if not installed then
--- 	vim.notify("Plugin 'toggleterm' is not installed")
--- 	return
--- end
-
 -- ##################################################################################################
 
 local wk = WhichKey
 
--- local Terminal = ToggleTerm.Terminal
--- local toggle_float = function()
--- 	local float = Terminal:new({ direction = "float" })
--- 	return float:toggle()
--- end
---
--- local toggle_lazygit = function()
--- 	local lazygit = Terminal:new({ cmd = "lazygit", direction = "float" })
--- 	return lazygit:toggle()
--- end
+local toggle_horizontal = function()
+	require("nvterm.terminal").toggle("horizontal")
+end
+
+local toggle_vertical = function()
+	require("nvterm.terminal").toggle("vertical")
+end
+
+local toggle_float = function()
+	require("nvterm.terminal").toggle("float")
+end
 
 local toggle_focus_nvimtree = function()
 	if vim.bo.filetype == "NvimTree" then
@@ -35,17 +29,17 @@ local toggle_focus_nvimtree = function()
 	end
 end
 
-local toggle_term = function()
-	require("nvterm.terminal").toggle("horizontal")
-end
-
-local toggle_term_vertical = function()
-	require("nvterm.terminal").toggle("vertical")
-end
-
-local toggle_term_hover = function()
-	require("nvterm.terminal").toggle("float")
-end
+-- local toggle_term = function()
+-- 	require("nvterm.terminal").toggle("horizontal")
+-- end
+--
+-- local toggle_term_vertical = function()
+-- 	require("nvterm.terminal").toggle("vertical")
+-- end
+--
+-- local toggle_term_hover = function()
+-- 	require("nvterm.terminal").toggle("float")
+-- end
 
 -- ##################################################################################################
 -- Keymaps
@@ -90,9 +84,9 @@ local mappings = {
 
 	-- Terminal
 	t = {
-		t = { toggle_term, "Split Below" },
-		h = { toggle_term_vertical, "Hide term" },
-		i = { toggle_term_hover, "Hide term" },
+		t = { toggle_horizontal, "Split Below" },
+		h = { toggle_vertical, "Hide term" },
+		i = { toggle_float, "Hide term" },
 		-- f = { toggle_float, "Floating Terminal" },
 		-- l = { toggle_lazygit, "LazyGit" },
 	},
@@ -125,7 +119,7 @@ local mappings = {
 		N = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Go To Previous Diagnostic" },
 	},
 	g = {
-		g = { "<cmd> LazyGit <CR>", "Open LazyGit" },
+		g = { ":LazyGit<CR>", "Open LazyGit" },
 	},
 	-- Tagbar for function list
 	T = {
