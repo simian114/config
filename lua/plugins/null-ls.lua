@@ -9,11 +9,11 @@ end
 local formatting = Null_ls.builtins.formatting
 local sources = {
 	formatting.stylua,
-	formatting.prettier,
+	formatting.prettierd,
 	formatting.autopep8,
 	formatting.black,
 	formatting.isort,
-	formatting.eslint,
+	formatting.eslint_d,
 }
 
 Null_ls.setup({
