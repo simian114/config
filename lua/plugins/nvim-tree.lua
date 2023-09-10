@@ -15,7 +15,8 @@ NvimTree.setup({
 		relativenumber = true,
 	},
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
+		git_ignored = false,
 	},
 
 	renderer = {
