@@ -1,17 +1,11 @@
 vim.g.mapleader = " "
 
 local map = vim.api.nvim_set_keymap
-local comment = function()
-	require("Comment.api").toggle.linewise.current()
-end
 -- Toggle between tabs
 map("n", "<C-h>", "<C-w>h", { noremap = true, silent = false })
 map("n", "<C-j>", "<C-w>j", { noremap = true, silent = false })
 map("n", "<C-k>", "<C-w>k", { noremap = true, silent = false })
 map("n", "<C-l>", "<C-w>l", { noremap = true, silent = false })
-
--- Go to prev
-map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })
 
 -- BufferLine
 map("n", "<Tab>", ":BufferLineCycleNext<cr>", { noremap = true, silent = true })
@@ -47,12 +41,16 @@ map("i", "¡", "<C-\\> <CR>", { noremap = true, silent = false })
 
 -- saga
 
-map("n", "gd", "<cmd> Lspsaga goto_definition <CR>", { noremap = true, silent = false })
-map("n", "gD", "<cmd> Lspsaga goto_type_definition <CR>", { noremap = true, silent = false })
+map("n", "gd", "<cmd>mark A <CR> <cmd> Lspsaga goto_definition <CR>", { noremap = true, silent = false })
+map("n", "gD", "<cmd>mark A <cmd> Lspsaga goto_type_definition <CR>", { noremap = true, silent = false })
 map("n", "gp", "<cmd> Lspsaga peek_definition <CR>", { noremap = true, silent = false })
 map("n", "gr", "<cmd> Lspsaga finder <CR>", { noremap = true, silent = false })
 map("n", "g.", "<cmd> Lspsaga diagnostic_jump_next <CR>", { noremap = true, silent = false })
 map("n", "gm", "<cmd> Lspsaga diagnostic_jump_prev <CR>", { noremap = true, silent = false })
 map("n", "K", "<cmd> Lspsaga hover_doc <CR>", { noremap = true, silent = false })
 
+-- Go to prev
+map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })
+
+-- Terminate Terminal mode
 map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })
