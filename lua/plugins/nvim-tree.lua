@@ -18,7 +18,10 @@ NvimTree.setup({
 		dotfiles = false,
 		git_ignored = false,
 	},
-
+	update_focused_file = {
+		enable = true,
+		update_root = false,
+	},
 	renderer = {
 		add_trailing = false,
 		group_empty = false,
