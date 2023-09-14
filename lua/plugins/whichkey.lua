@@ -121,7 +121,6 @@ local mappings = {
 		N = { "<cmd>Lspsaga diagnostic_jump_prev<cr>", "Go To Previous Diagnostic" },
 	},
 	g = {
-		g = { ":LazyGit<CR>", "Open LazyGit" },
 		b = {
 			function()
 				require("gitsigns").blame_line({ full = true })
@@ -147,9 +146,10 @@ local mappings = {
 			"reset hunk",
 		},
 
-		k = { toggle_git_diff, "open git diff" },
+		g = { toggle_git_diff, "open git diff" },
 		h = { "<cmd>DiffviewFileHistory <CR>", "toggle git history diff" },
 		c = { "<cmd>DiffviewClose <CR>", "toggle git history diff" },
+		l = { ":LazyGit<CR>", "Open LazyGit" },
 	},
 	k = {
 		k = { toggle_git_diff, "open git diff" },
