@@ -151,11 +151,6 @@ local mappings = {
 		c = { "<cmd>DiffviewClose <CR>", "toggle git history diff" },
 		l = { ":LazyGit<CR>", "Open LazyGit" },
 	},
-	k = {
-		k = { toggle_git_diff, "open git diff" },
-		h = { "<cmd>DiffviewFileHistory <CR>", "toggle git history diff" },
-		c = { "<cmd>DiffviewClose <CR>", "toggle git history diff" },
-	},
 
 	-- Tagbar for function list
 	T = {

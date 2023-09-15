@@ -54,3 +54,7 @@ map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })
 
 -- Terminate Terminal mode
 map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })
+
+-- 10 line move
+map("n", "<C-j>", "10j <CR>", { noremap = true, silent = false })
+map("n", "<C-k>", "10k <CR>", { noremap = true, silent = false })
