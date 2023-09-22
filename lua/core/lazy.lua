@@ -1,4 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
@@ -9,6 +10,7 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
@@ -242,47 +244,60 @@ local plugins = {
 			{ "]]", desc = "Next Reference" },
 			{ "[[", desc = "Prev Reference" },
 		},
-		{
-			"rainbowhxch/accelerated-jk.nvim", -- {{{
-			keys = {
-				{ "j", "<Plug>(accelerated_jk_gj)", mode = { "n" }, desc = "Accelerated gj movement" },
-				{ "k", "<Plug>(accelerated_jk_gk)", mode = { "n" }, desc = "Accelerated gk movement" },
-			},
-			opts = {
-				mode = "time_driven",
-				enable_deceleration = false,
-				acceleration_motions = {},
-				acceleration_limit = 150,
-				acceleration_table = { 7, 12, 17, 21, 24, 26, 28, 30 },
-				deceleration_table = { { 150, 9999 } },
-			},
-			-- }}}
+	},
+	{
+		"rainbowhxch/accelerated-jk.nvim", -- {{{
+		keys = {
+			{ "j", "<Plug>(accelerated_jk_gj)", mode = { "n" }, desc = "Accelerated gj movement" },
+			{ "k", "<Plug>(accelerated_jk_gk)", mode = { "n" }, desc = "Accelerated gk movement" },
 		},
-		{
-			"chentoast/marks.nvim",
-			config = function()
-				require("marks").setup({
-					default_mappings = true,
-					signs = true,
-					mappings = {
-						next = "m.",
-						prev = "m,",
-					},
-				})
-			end,
+		opts = {
+			mode = "time_driven",
+			enable_deceleration = false,
+			acceleration_motions = {},
+			acceleration_limit = 150,
+			acceleration_table = { 7, 12, 17, 21, 24, 26, 28, 30 },
+			deceleration_table = { { 150, 9999 } },
 		},
-		{ "famiu/bufdelete.nvim" },
-		{
-			"karb94/neoscroll.nvim",
-			config = function()
-				require("neoscroll").setup()
-			end,
-		},
-		{
-			"ggandor/leap.nvim",
-			config = function()
-				require("leap").add_default_mappings()
-			end,
+		-- }}}
+	},
+	{
+		"chentoast/marks.nvim",
+		config = function()
+			require("marks").setup({
+				default_mappings = true,
+				signs = true,
+				mappings = {
+					next = "m.",
+					prev = "m,",
+				},
+			})
+		end,
+	},
+	{ "famiu/bufdelete.nvim" },
+	{
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("neoscroll").setup()
+		end,
+	},
+	{
+		"ggandor/leap.nvim",
+		config = function()
+			require("leap").add_default_mappings()
+		end,
+	},
+	-- Chat GPT
+	{
+		"jackMort/ChatGPT.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("chatgpt").setup()
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
 		},
 	},
 	-- ==============================================================

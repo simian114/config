@@ -56,5 +56,5 @@ map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })
 map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })
 
 -- 10 line move
-map("n", "<C-j>", "10j <CR>", { noremap = true, silent = false })
-map("n", "<C-k>", "10k <CR>", { noremap = true, silent = false })
+map("n", "<M-j>", "10j <CR>", { noremap = true, silent = false })
+map("n", "<M-k>", "10k <CR>", { noremap = true, silent = false })

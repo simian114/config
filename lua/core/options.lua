@@ -47,7 +47,6 @@ vim.o.mouse = "a"
 -- Wrapping
 vim.wo.wrap = false
 vim.wo.number = true
-vim.wo.relativenumber = true
 vim.o.cursorline = true
 vim.o.cursorcolumn = true
 vim.wo.signcolumn = "yes"
@@ -68,7 +67,6 @@ vim.bo.expandtab = true
 
 vim.opt.list = true
 vim.opt.listchars:append("eol:↴")
-vim.opt.fillchars = { eob = " " }
 
 -- Nvim Notify
 vim.notify = require("notify")

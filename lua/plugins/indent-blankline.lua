@@ -34,7 +34,7 @@ IndentBlankLine.setup({
 	},
 
 	buftype_exclude = { "terminal" },
-	space_char_blankline = " ",
+	-- space_char_blankline = " ",
 	show_current_context = true,
 	show_current_context_start = false,
 	context_patterns = {
@@ -69,5 +69,5 @@ IndentBlankLine.setup({
 	},
 	max_indent_increase = 1,
 	strict_tabs = true,
-	vim.opt.listchars:append("space:⋅"),
+	-- vim.opt.listchars:append("space:⋅"),
 })
