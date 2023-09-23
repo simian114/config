@@ -29,6 +29,10 @@ LspSaga.setup({
 		scroll_down = "<C-f>",
 		scroll_up = "<C-b>",
 	},
+	finder = {
+		left_width = 0.4,
+		layout = "normal",
+	},
 
 	code_action_keys = { quit = "q", exec = "<CR>" },
 	rename_action_keys = { quit = "<C-c>", exec = "<CR>" },
