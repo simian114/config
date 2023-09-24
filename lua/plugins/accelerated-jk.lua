@@ -3,7 +3,6 @@ if not installed then
 	vim.notify("Plugin 'nvim-cmp' is not installed")
 	return
 end
-vim.notify("Plugin 'acce' is installed")
 AcceleratedJK.setup({
 	mode = "time_driven",
 	enable_deceleration = false,
