@@ -54,9 +54,9 @@ local mappings = {
   DD = { ":Alpha<cr>", "StartPage" },
 
   -- Basic Operations
-  -- q = { ":q<cr>", "Quit File" },
-  -- Q = { ":q!<cr>", "Force Quit File" },
-  -- w = { ":w<cr>", "Save File" },
+  q = { ":q<cr>", "Quit File" },
+  Q = { ":q!<cr>", "Force Quit File" },
+  w = { "<C-w>", "Save File" },
   -- W = { ":w!<cr>", "Force Save File" },
 
   -- Buffers
