@@ -174,11 +174,48 @@ local plugins = {
 		"Exafunction/codeium.vim",
 		event = "BufEnter",
 	},
-	--
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		after = "nvim-treesitter",
 		requires = "nvim-treesitter/nvim-treesitter",
+	},
+	{
+		"anuvyklack/pretty-fold.nvim",
+		config = function()
+			require("pretty-fold").setup()
+		end,
+	},
+	{ "anuvyklack/keymap-amend.nvim" },
+	{
+		"anuvyklack/fold-preview.nvim",
+		requires = "anuvyklack/keymap-amend.nvim",
+		config = function()
+			local fp = require("fold-preview")
+			local map = require("fold-preview").mapping
+			local keymap = vim.keymap
+			keymap.amend = require("keymap-amend")
+
+			fp.setup({
+				default_keybindings = false,
+				-- another settings
+			})
+
+			keymap.amend("n", "zk", function(original)
+				if not fp.show_preview() then
+					original()
+				end
+				-- or
+				-- if not fp.toggle_preview() then original() end
+				-- to close preview on second press on K.
+			end)
+			keymap.amend("n", "h", map.close_preview_open_fold)
+			keymap.amend("n", "l", map.close_preview_open_fold)
+			keymap.amend("n", "zo", map.close_preview)
+			keymap.amend("n", "zO", map.close_preview)
+			keymap.amend("n", "zc", map.close_preview_without_defer)
+			keymap.amend("n", "zR", map.close_preview)
+			keymap.amend("n", "zM", map.close_preview_without_defer)
+		end,
 	},
 	-- ==============================================================
 	--
