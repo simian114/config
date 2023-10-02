@@ -3,20 +3,14 @@ if not installed then
 	return
 end
 
-local installed, Dashboard = pcall(require, "alpha.themes.dashboard")
+-- local installed, Dashboard = pcall(require, "alpha.themes.dashboard")
+local installed, Startify = pcall(require, "alpha.themes.startify")
 if not installed then
 	return
 end
 
-local dashboard = Dashboard
-dashboard.section.header.val = {
-	[[                                                                       ]],
-	[[                                                                       ]],
-	[[                                                                       ]],
-	[[                                                                       ]],
-	[[                                                                       ]],
-	[[                                                                       ]],
-	[[                                                                       ]],
+local startify = Startify
+startify.section.header.val = {
 	[[                                                                       ]],
 	[[                                                                       ]],
 	[[                                                                     ]],
@@ -28,29 +22,23 @@ dashboard.section.header.val = {
 	[[  ███████████ ███    ███ █████████ █████ █████ ████ █████  ]],
 	[[ ██████  █████████████████████ ████ █████ █████ ████ ██████ ]],
 	[[                                                                       ]],
+	[[                                          컴퓨터는 가끔 거짓말을 한다. ]],
+	[[                                                               - sanam ]],
 	[[                                                                       ]],
 	[[                                                                       ]],
 }
 
-dashboard.section.buttons.val = {
-	dashboard.button("e", "  New file", "<cmd>ene <CR>"),
-	dashboard.button("SPC s f", "  Find file"),
-	dashboard.button("SPC s o", "  Recently opened files"),
-	dashboard.button("SPC s r", "  Resume Telescope"),
-	dashboard.button("SPC s g", "  Find word"),
-	dashboard.button("SPC s b", "  Open buffers"),
-}
-opts = {
-	position = "center",
-	hl = "Type",
-	-- wrap = "overflow";
+startify.section.top_buttons.val = {
+	startify.button("SPC f f", "  Find file"),
+	startify.button("SPC f o", "  Recently opened files"),
+	startify.button("SPC f w", "  Find word"),
+	startify.button("SPC f b", "  Open buffers"),
 }
 
-local function footer()
-	return "Programming is an art of patience not talent"
-end
+startify.section.bottom_buttons.val = {
+	startify.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
+}
 
-dashboard.section.footer.val = footer()
+startify.section.header.opts.position = "center"
 
-dashboard.opts.opts.noautocmd = true
-alpha.setup(dashboard.opts)
+alpha.setup(startify.config)
