@@ -17,17 +17,16 @@
       export EDITOR="nvim"
     fi
 
-alias vim="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#I.#P').pipe"
-alias vi="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#I.#P').pipe"
-alias v="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#I.#P').pipe"
+    alias vim="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#I.#P').pipe"
+    alias vi="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#I.#P').pipe"
+    alias v="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#I.#P').pipe"
     ```
 - LazyGitConfig (Neovim 에서 `LazyGitConfig` 명령어 실행)
   - ```
     os:
-  editCommandTemplate: 'nvr -O {{filename}}; nvr --remote-send "<c-w>o<cr>:set nu<cr>"'
-  editAtLineAndWait: "nvim +{{line}} {{filename}}"
-  editAtLine: 'nvr -O {{filename}}; nvr --remote-send "<c-w>o<cr>:{{line}}<CR>:set nu<cr>"'
-
+      editCommandTemplate: 'nvr -O {{filename}}; nvr --remote-send "<c-w>o<cr>:set nu<cr>"'
+      editAtLineAndWait: "nvim +{{line}} {{filename}}"
+      editAtLine: 'nvr -O {{filename}}; nvr --remote-send "<c-w>o<cr>:{{line}}<CR>:set nu<cr>"'
     ```
 
 ## iterm2 설정
