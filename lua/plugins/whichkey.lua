@@ -195,9 +195,6 @@ wk.register(terminalMappings, terminalOpts)
 
 --#region
 wk.setup({
-	show_keys = false,
-	show_help = false,
-	registers = false,
 	window = {
 		position = "top",
 	},
