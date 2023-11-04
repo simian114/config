@@ -40,7 +40,7 @@ local plugins = {
 	{ "mechatroner/rainbow_csv" },
 
 	-- Colorizer.lua
-	-- { "norcalli/nvim-colorizer.lua" },
+	{ "norcalli/nvim-colorizer.lua" },
 
 	{
 		"NvChad/nvterm",
@@ -200,6 +200,7 @@ local plugins = {
 			fp.setup({
 				default_keybindings = false,
 				-- another settings
+				border = "double",
 			})
 
 			keymap.amend("n", "zk", function(original)
@@ -212,11 +213,6 @@ local plugins = {
 			end)
 			keymap.amend("n", "h", map.close_preview_open_fold)
 			keymap.amend("n", "l", map.close_preview_open_fold)
-			keymap.amend("n", "zo", map.close_preview)
-			keymap.amend("n", "zO", map.close_preview)
-			keymap.amend("n", "zc", map.close_preview_without_defer)
-			keymap.amend("n", "zR", map.close_preview)
-			keymap.amend("n", "zM", map.close_preview_without_defer)
 		end,
 	},
 	{

@@ -44,7 +44,7 @@ map("i", "¡", "<C-\\> <CR>", { noremap = true, silent = false })
 map("n", "gd", "<cmd>mark A <CR> <cmd> Lspsaga goto_definition <CR>", { noremap = true, silent = false })
 map("n", "gD", "<cmd>mark A <cmd> Lspsaga goto_type_definition <CR>", { noremap = true, silent = false })
 map("n", "gp", "<cmd> Lspsaga peek_definition <CR>", { noremap = true, silent = false })
-map("n", "gr", "<cmd> Lspsaga finder <CR>", { noremap = true, silent = false })
+map("n", "gf", "<cmd> Lspsaga finder <CR>", { noremap = true, silent = false })
 map("n", "g.", "<cmd> Lspsaga diagnostic_jump_next <CR>", { noremap = true, silent = false })
 map("n", "gm", "<cmd> Lspsaga diagnostic_jump_prev <CR>", { noremap = true, silent = false })
 map("n", "K", "<cmd> Lspsaga hover_doc <CR>", { noremap = true, silent = false })
@@ -58,3 +58,7 @@ map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })
 -- 10 line move
 map("n", "<M-j>", "10j <CR>", { noremap = true, silent = false })
 map("n", "<M-k>", "10k <CR>", { noremap = true, silent = false })
+
+-- folds
+map("n", "zo", "zfi{", { noremap = true, silent = false })
+map("n", "zO", "zfa{", { noremap = true, silent = false })
