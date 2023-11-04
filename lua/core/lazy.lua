@@ -42,8 +42,6 @@ local plugins = {
 	-- Colorizer.lua
 	-- { "norcalli/nvim-colorizer.lua" },
 
-	-- Terminal
-	-- { "akinsho/toggleterm.nvim" },
 	{
 		"NvChad/nvterm",
 		config = function()
