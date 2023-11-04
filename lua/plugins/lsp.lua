@@ -87,7 +87,8 @@ MasonToolInstaller.setup({
 		{ "pyright" },
 		{ "black" },
 		{ "autopep8" },
-		{ "json-lsp" }
+		{ "json-lsp" },
+		{ "gopls", auto_update = true },
 	},
 
 	auto_update = false,
@@ -137,5 +138,9 @@ LspConfig.cssls.setup({
 -- Support for tailwind auto completion
 -- install the tailwind server : "sudo npm install -g @tailwindcss/language-server"
 LspConfig.tailwindcss.setup({
+	capabilities = capabilities,
+})
+
+LspConfig.gopls.setup({
 	capabilities = capabilities,
 })

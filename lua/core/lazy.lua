@@ -40,7 +40,7 @@ local plugins = {
 	{ "mechatroner/rainbow_csv" },
 
 	-- Colorizer.lua
-	{ "norcalli/nvim-colorizer.lua" },
+	-- { "norcalli/nvim-colorizer.lua" },
 
 	-- Terminal
 	-- { "akinsho/toggleterm.nvim" },
@@ -60,11 +60,13 @@ local plugins = {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		event = "bufWinEnter",
+		event = { "BufReadPre", "BufNewFile" },
+		-- event = "bufWinEnter",
 		dependencies = {
 			"JoosepAlviste/nvim-ts-context-commentstring",
 		},
 	},
+	{ "nvim-treesitter/playground" },
 
 	-- nvim-ts-autotag
 	{ "windwp/nvim-ts-autotag" },
@@ -93,7 +95,6 @@ local plugins = {
 		"nvim-tree/nvim-tree.lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
-
 	-- Buffer Line
 	{
 		"akinsho/bufferline.nvim",
@@ -103,7 +104,10 @@ local plugins = {
 	{ "nvim-lualine/lualine.nvim" },
 
 	-- WhichKey
-	{ "folke/which-key.nvim" },
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+	},
 
 	-- Auto Completion
 	{ "hrsh7th/nvim-cmp" }, -- cmp Completion plugin
@@ -170,10 +174,10 @@ local plugins = {
 	{ "famiu/bufdelete.nvim" },
 	{ "karb94/neoscroll.nvim" },
 	{ "ggandor/leap.nvim" },
-	{
-		"Exafunction/codeium.vim",
-		event = "BufEnter",
-	},
+	-- {
+	-- 	"Exafunction/codeium.vim",
+	-- 	event = "BufEnter",
+	-- },
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		after = "nvim-treesitter",
@@ -216,6 +220,38 @@ local plugins = {
 			keymap.amend("n", "zR", map.close_preview)
 			keymap.amend("n", "zM", map.close_preview_without_defer)
 		end,
+	},
+	{
+		"diepm/vim-rest-console",
+	},
+	{
+		"tpope/vim-dadbod",
+	},
+	{
+		"kristijanhusak/vim-dadbod-ui",
+		dependencies = {
+			{ "tpope/vim-dadbod", lazy = true },
+			{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+		},
+		cmd = {
+			"DBUI",
+			"DBUIToggle",
+			"DBUIAddConnection",
+			"DBUIFindBuffer",
+		},
+		init = function()
+			-- Your DBUI configuration
+			vim.g.db_ui_use_nerd_fonts = 1
+		end,
+	},
+	{
+		"stevearc/aerial.nvim",
+		opts = {},
+		-- Optional dependencies
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
 	},
 	-- ==============================================================
 	--

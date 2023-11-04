@@ -1,9 +1,11 @@
 -- requring plugin
 local installed, TreeSitter = pcall(require, "nvim-treesitter.configs")
+
 if not installed then
 	vim.notify("Plugin 'treesitter' is not installed")
 	return
 end
+
 -- Setting up Treesitter
 TreeSitter.setup({
 	ensure_installed = {
@@ -16,11 +18,13 @@ TreeSitter.setup({
 		"python",
 		"markdown",
 		"markdown_inline",
+		"go",
+		"json",
 	},
 	sync_install = false,
 	auto_install = true,
 	highlight = {
-		enable = true,
+		enable = false,
 		additional_vim_regex_highlighting = false,
 	},
 

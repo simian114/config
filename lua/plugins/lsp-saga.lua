@@ -34,6 +34,11 @@ LspSaga.setup({
 		layout = "normal",
 	},
 
+	definition = {
+		keys = {
+			edit = "o",
+		},
+	},
 	code_action_keys = { quit = "q", exec = "<CR>" },
 	rename_action_keys = { quit = "<C-c>", exec = "<CR>" },
 	definition_preview_icon = "  ",
