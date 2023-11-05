@@ -56,13 +56,28 @@ map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })
 -- map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })
 
 -- 10 line move
-map("n", "<M-j>", "10j <CR>", { noremap = true, silent = false })
-map("n", "<M-k>", "10k <CR>", { noremap = true, silent = false })
+-- map("n", "<M-j>", "10j <CR>", { noremap = true, silent = false })
+-- map("n", "<M-k>", "10k <CR>", { noremap = true, silent = false })
 
 -- folds
 map("n", "zo", "zfi{", { noremap = true, silent = false })
 map("n", "zO", "zfa{", { noremap = true, silent = false })
 
-vim.keymap.set("t", "<ESC>", function()
-	require("nvterm.terminal").toggle("horizontal")
-end, { noremap = true, silent = true })
+local terminal = require("nvterm.terminal")
+
+-- terminal
+local toggle_modes = { "n", "t" }
+local mappings = {
+	{
+		toggle_modes,
+		"<M-j>",
+		function()
+			terminal.toggle("horizontal")
+		end,
+	},
+}
+local opts = { noremap = true, silent = true }
+
+for _, mapping in ipairs(mappings) do
+	vim.keymap.set(mapping[1], mapping[2], mapping[3], opts)
+end
