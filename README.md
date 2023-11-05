@@ -38,3 +38,6 @@
 4. key mappings
 5. ![Screenshot 2023-09-07 at 11 33 17 PM](https://github.com/simian114/nvim/assets/49119625/3e01ffc2-6eab-43ef-a12d-51c53a533921)
 6. opt + esc 로 ¡ send
+
+## tmux 설정
+- 티먹스 프리셋값을 ctrl + p 로 설정해야함
