@@ -238,15 +238,14 @@ local plugins = {
 			vim.g.db_ui_use_nerd_fonts = 1
 		end,
 	},
+
 	{
-		"stevearc/aerial.nvim",
-		opts = {},
-		-- Optional dependencies
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"nvim-tree/nvim-web-devicons",
-		},
+		"simrat39/symbols-outline.nvim",
+		config = function()
+			require("symbols-outline").setup()
+		end,
 	},
+	{ "RRethy/vim-illuminate" },
 	-- ==============================================================
 	--
 } -- end of plugin line

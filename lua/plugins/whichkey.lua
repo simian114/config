@@ -98,8 +98,7 @@ local normalMappings = {
 		h = { toggle_vertical, "Hide term" },
 		i = { toggle_float, "Hide term" },
 		s = { ":TSToggle highlight<cr>", "Toggle highlight" },
-		a = { ":AerialToggle<cr>", "Toggle Aerial" },
-		n = { ":AerialNavToggle<cr>", "Toggle Aerial" },
+		a = { ":SymbolsOutline<cr>", "Toggle Aerial" },
 		-- f = { toggle_float, "Floating Terminal" },
 		-- l = { toggle_lazygit, "LazyGit" },
 	},
@@ -197,5 +196,6 @@ wk.register(terminalMappings, terminalOpts)
 wk.setup({
 	window = {
 		position = "top",
+		border = "double",
 	},
 })
