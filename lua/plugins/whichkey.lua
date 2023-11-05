@@ -95,9 +95,6 @@ local normalMappings = {
 
 	-- Terminal
 	t = {
-		t = { toggle_horizontal, "Split Below" },
-		h = { toggle_vertical, "Hide term" },
-		i = { toggle_float, "Hide term" },
 		s = { ":TSToggle highlight<cr>", "Toggle highlight" },
 		a = { ":SymbolsOutline<cr>", "Toggle Aerial" },
 		-- f = { toggle_float, "Floating Terminal" },
