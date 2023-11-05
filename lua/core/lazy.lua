@@ -246,7 +246,9 @@ local plugins = {
 		end,
 	},
 	{ "RRethy/vim-illuminate" },
+	{ "fatih/vim-go" },
 	-- ==============================================================
+	--
 	--
 } -- end of plugin line
 

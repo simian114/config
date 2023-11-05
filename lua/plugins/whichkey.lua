@@ -85,6 +85,7 @@ local normalMappings = {
 		d = { ":Telescope current_buffer_fuzzy_find theme=ivy<cr>", "Fuzzy Find in File" },
 		o = { ":Telescope oldfiles theme=ivy<cr>", "Telescope oldfiles" },
 		w = { ":Telescope live_grep theme=ivy<cr>", "Telescope live_grep" },
+		h = { ":Telescope search_history theme=ivy<cr>", "Telescope live_grep" },
 		r = { ":Telescope resume theme=ivy<cr>", "Telescope resume" },
 		b = { ":Telescope buffers theme=ivy<cr>", "Telescope buffers" },
 	},
@@ -183,14 +184,14 @@ wk.register(visualMappings, visualOpts)
 
 local terminalMappings = {
 	t = {
-		t = { toggle_horizontal, "Split Below" },
-		h = { toggle_vertical, "Hide term" },
-		i = { toggle_float, "Hide term" },
+		-- t = { toggle_horizontal, "Split Below" },
+		-- h = { toggle_vertical, "Hide term" },
+		-- i = { toggle_float, "Hide term" },
 	},
 }
 
 local terminalOpts = { prefix = "<leader>", mode = "t" }
-wk.register(terminalMappings, terminalOpts)
+-- wk.register(terminalMappings, terminalOpts)
 
 --#region
 wk.setup({

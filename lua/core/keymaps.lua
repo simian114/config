@@ -53,7 +53,7 @@ map("n", "K", "<cmd> Lspsaga hover_doc <CR>", { noremap = true, silent = false }
 map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })
 
 -- Terminate Terminal mode
-map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })
+-- map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })
 
 -- 10 line move
 map("n", "<M-j>", "10j <CR>", { noremap = true, silent = false })
@@ -62,3 +62,7 @@ map("n", "<M-k>", "10k <CR>", { noremap = true, silent = false })
 -- folds
 map("n", "zo", "zfi{", { noremap = true, silent = false })
 map("n", "zO", "zfa{", { noremap = true, silent = false })
+
+vim.keymap.set("t", "<ESC>", function()
+	require("nvterm.terminal").toggle("horizontal")
+end, { noremap = true, silent = true })
