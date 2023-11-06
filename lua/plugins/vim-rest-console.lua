@@ -12,11 +12,7 @@ vim.g.vrc_auto_format_response_patterns = {
 	json = "jq",
 }
 
--- vim.g.vrc_curl_opts = {
--- 	["--silent"] = "",
--- 	["--include"] = "",
--- }
-
--- vim.g.vrc_curl_opts = {
--- 	"--silent" =  ""
--- }
+vim.g.vrc_curl_opts = {
+	["--silent"] = "",
+	["--include"] = "",
+}
