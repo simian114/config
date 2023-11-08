@@ -1,8 +1,6 @@
 {
   "title": "sanam's Hyper with capslock",
-  "maintainers": [
-    "sanam"
-  ],
+  "maintainers": ["sanam"],
   "author": "simian114@gmail.com",
   "rules": [
     {
@@ -201,6 +199,27 @@
           "type": "basic",
           "from": {
             "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button1"
+            }
+          ]
+        },
+        {
+          "description": "left command h == left click",
+          "type": "basic",
+          "from": {
+            "key_code": "h",
             "modifiers": {
               "mandatory": [
                 "right_command",

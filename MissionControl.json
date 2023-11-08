@@ -1,8 +1,6 @@
 {
   "title": "sanam's Hyper with capslock",
-  "maintainers": [
-    "sanam"
-  ],
+  "maintainers": ["sanam"],
   "author": "simian114@gmail.com",
   "rules": [
     {
@@ -25,9 +23,33 @@
           "to": [
             {
               "key_code": "up_arrow",
-              "modifiers": [
-                "left_control"
-              ]
+              "modifiers": ["left_control"]
+            }
+          ]
+        },
+        {
+          "description": "eject",
+          "type": "basic",
+          "from": {
+            "consumer_key_code": "eject"
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": ["left_control", "left_shift"]
+            }
+          ]
+        },
+        {
+          "description": "insert to mission contorl",
+          "type": "basic",
+          "from": {
+            "key_code": "insert"
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": ["left_control", "left_shift"]
             }
           ]
         },
@@ -48,9 +70,7 @@
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": [
-                "left_control"
-              ]
+              "modifiers": ["left_control"]
             }
           ]
         },
@@ -71,9 +91,7 @@
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": [
-                "left_control"
-              ]
+              "modifiers": ["left_control"]
             }
           ]
         },
@@ -95,11 +113,7 @@
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": [
-                "left_control",
-                "left_command",
-                "left_option"
-              ]
+              "modifiers": ["left_control", "left_command", "left_option"]
             }
           ]
         },
@@ -121,11 +135,7 @@
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": [
-                "left_control",
-                "left_command",
-                "left_option"
-              ]
+              "modifiers": ["left_control", "left_command", "left_option"]
             }
           ]
         },
@@ -147,10 +157,7 @@
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": [
-                "left_command",
-                "left_option"
-              ]
+              "modifiers": ["left_command", "left_option"]
             }
           ]
         },
@@ -172,10 +179,7 @@
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": [
-                "left_command",
-                "left_option"
-              ]
+              "modifiers": ["left_command", "left_option"]
             }
           ]
         }
