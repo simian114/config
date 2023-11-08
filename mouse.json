@@ -195,6 +195,27 @@
           ]
         },
         {
+          "description": "left command ; == left click",
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button1"
+            }
+          ]
+        },
+        {
           "description": "left command n == left click",
           "type": "basic",
           "from": {
