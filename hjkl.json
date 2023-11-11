@@ -1,12 +1,10 @@
 {
   "title": "sanam's Hyper with capslock",
-  "maintainers": [
-    "sanam"
-  ],
+  "maintainers": ["sanam"],
   "author": "simian114@gmail.com",
   "rules": [
     {
-      "description": "Hyper jklsemicolon Navigation hello",
+      "description": "Hyper jklsemicolon Navigation",
       "manipulators": [
         {
           "description": "j == left arrow",
@@ -99,102 +97,6 @@
                 "right_control",
                 "right_shift",
                 "right_option",
-                "left_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "up_arrow",
-              "modifiers": [
-                "left_option"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "command + k == shift s",
-          "type": "basic",
-          "from": {
-            "key_code": "k",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option",
-                "left_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "down_arrow",
-              "modifiers": [
-                "left_option"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "command + l == shift d",
-          "type": "basic",
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option",
-                "left_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_option"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "command + j == shift a",
-          "type": "basic",
-          "key_code": "j",
-          "from": {
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option",
-                "left_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_option"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "command + i == shift w",
-          "type": "basic",
-          "from": {
-            "key_code": "i",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option",
                 "left_shift"
               ]
             }
@@ -202,9 +104,7 @@
           "to": [
             {
               "key_code": "up_arrow",
-              "modifiers": [
-                "left_shift"
-              ]
+              "modifiers": ["left_shift"]
             }
           ]
         },
@@ -226,9 +126,7 @@
           "to": [
             {
               "key_code": "down_arrow",
-              "modifiers": [
-                "left_shift"
-              ]
+              "modifiers": ["left_shift"]
             }
           ]
         },
@@ -250,9 +148,7 @@
           "to": [
             {
               "key_code": "right_arrow",
-              "modifiers": [
-                "left_shift"
-              ]
+              "modifiers": ["left_shift"]
             }
           ]
         },
@@ -274,9 +170,7 @@
           "to": [
             {
               "key_code": "left_arrow",
-              "modifiers": [
-                "left_shift"
-              ]
+              "modifiers": ["left_shift"]
             }
           ]
         }

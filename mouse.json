@@ -24,7 +24,7 @@
           "to": [
             {
               "mouse_key": {
-                "x": -1536
+                "x": -1152
               }
             }
           ]
@@ -47,7 +47,7 @@
           "to": [
             {
               "mouse_key": {
-                "y": -1536
+                "y": -1152
               }
             }
           ]
@@ -70,8 +70,8 @@
           "to": [
             {
               "mouse_key": {
-                "x": -768,
-                "y": -768
+                "x": -576,
+                "y": -576
               }
             }
           ]
@@ -94,8 +94,8 @@
           "to": [
             {
               "mouse_key": {
-                "x": 768,
-                "y": -768
+                "x": 576,
+                "y": -576
               }
             }
           ]
@@ -118,8 +118,8 @@
           "to": [
             {
               "mouse_key": {
-                "x": 768,
-                "y": 768
+                "x": 576,
+                "y": 576
               }
             }
           ]
@@ -142,8 +142,8 @@
           "to": [
             {
               "mouse_key": {
-                "x": -768,
-                "y": 768
+                "x": -576,
+                "y": 576
               }
             }
           ]
@@ -166,7 +166,7 @@
           "to": [
             {
               "mouse_key": {
-                "y": 1536
+                "y": 1152
               }
             }
           ]
@@ -189,29 +189,8 @@
           "to": [
             {
               "mouse_key": {
-                "x": 1536
+                "x": 1152
               }
-            }
-          ]
-        },
-        {
-          "description": "left command ; == left click",
-          "type": "basic",
-          "from": {
-            "key_code": "semicolon",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option",
-                "left_command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "pointing_button": "button1"
             }
           ]
         },
@@ -220,27 +199,6 @@
           "type": "basic",
           "from": {
             "key_code": "spacebar",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option",
-                "left_command"
-              ]
-            }
-          },
-          "to": [
-            {
-              "pointing_button": "button1"
-            }
-          ]
-        },
-        {
-          "description": "left command h == left click",
-          "type": "basic",
-          "from": {
-            "key_code": "h",
             "modifiers": {
               "mandatory": [
                 "right_command",
@@ -405,6 +363,379 @@
                 "right_shift",
                 "right_option",
                 "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": -64
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Hyper mouse with option",
+      "manipulators": [
+        {
+          "description": "mouse left(j)",
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": -1152
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse up(i)",
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "y": -1152
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse up-left (u)",
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": -576,
+                "y": -576
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse up-right(o)",
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": 576,
+                "y": -576
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse down-right(.)",
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": 576,
+                "y": 576
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse down-left(n)",
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": -576,
+                "y": 576
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse down(k)",
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "y": 1152
+              }
+            }
+          ]
+        },
+        {
+          "description": "mouse right(l)",
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "x": 1152
+              }
+            }
+          ]
+        },
+        {
+          "description": "left command n == left click",
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button1"
+            }
+          ]
+        },
+        {
+          "description": "left command '(quote) == right click",
+          "type": "basic",
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button2"
+            }
+          ]
+        },
+        {
+          "description": "left command + h = scroll left",
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": 64
+              }
+            }
+          ]
+        },
+        {
+          "description": "left command + ; = scroll right",
+          "type": "basic",
+          "from": {
+            "key_code": ";",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": 64
+              }
+            }
+          ]
+        },
+        {
+          "description": "scroll up(,)",
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "vertical_wheel": -64
+              }
+            }
+          ]
+        },
+        {
+          "description": "scroll down(m)",
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "vertical_wheel": 64
+              }
+            }
+          ]
+        },
+        {
+          "description": "scroll left(h)",
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "mouse_key": {
+                "horizontal_wheel": 64
+              }
+            }
+          ]
+        },
+        {
+          "description": "scroll right(;)",
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_option"
               ]
             }
           },
