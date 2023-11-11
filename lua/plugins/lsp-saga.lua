@@ -39,6 +39,10 @@ LspSaga.setup({
 			edit = "o",
 		},
 	},
+	-- light bulb
+	ui = {
+		enable = true,
+	},
 	code_action_keys = { quit = "q", exec = "<CR>" },
 	rename_action_keys = { quit = "<C-c>", exec = "<CR>" },
 	definition_preview_icon = "  ",

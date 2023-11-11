@@ -9,65 +9,53 @@ vim.cmd([[highlight IndentBlanklineIndent6 guifg=#b8bb26 gui=nocombine]])
 vim.cmd([[highlight IndentBlanklineIndent7 guifg=#fb4934 gui=nocombine]])
 
 -- requring Plugin
-local installed, IndentBlankLine = pcall(require, "indent_blankline")
+local installed, IndentBlankLine = pcall(require, "ibl")
+--
 if not installed then
 	vim.notify("Plugin 'indent_blankline' is not installed")
 	return
 end
 
+local iblInstalled, IblHooks = pcall(require, "ibl.hooks")
+
+IblHooks.register(IblHooks.type.HIGHLIGHT_SETUP, function()
+	vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E06C75" })
+	vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+	vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
+	vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
+	vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
+	vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+	vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+end)
+
+local highlight = {
+	"RainbowRed",
+	"RainbowYellow",
+	"RainbowBlue",
+	"RainbowOrange",
+	"RainbowGreen",
+	"RainbowViolet",
+	"RainbowCyan",
+}
+
 -- Setting up indent_blankline
 IndentBlankLine.setup({
-	opts = {
-		show_trailing_blankline_indent = false,
+	exclude = {
+		filetypes = {
+			"help",
+			"alpha",
+			"dashboard",
+			"neo-tree",
+			"Trouble",
+			"lazy",
+			"lsp-installer",
+			"termianl",
+			"NvimTree",
+			"mason",
+		},
 	},
-	filetype_exclude = {
-		"help",
-		"alpha",
-		"dashboard",
-		"neo-tree",
-		"Trouble",
-		"lazy",
-		"lsp-installer",
-		"termianl",
-		"NvimTree",
-		"mason",
+	whitespace = {
+		remove_blankline_trail = true,
 	},
-
-	buftype_exclude = { "terminal" },
-	-- space_char_blankline = " ",
-	show_current_context = true,
-	show_current_context_start = false,
-	context_patterns = {
-		"class",
-		"return",
-		"function",
-		"method",
-		"^if",
-		"^while",
-		"jsx_element",
-		"^for",
-		"^object",
-		"^table",
-		"block",
-		"arguments",
-		"if_statement",
-		"else_clause",
-		"jsx_element",
-		"jsx_self_closing_element",
-		"try_statement",
-		"catch_clause",
-		"import_statement",
-		"operation_type",
-	},
-	char_highlight_list = {
-		"IndentBlanklineIndent1",
-		"IndentBlanklineIndent2",
-		"IndentBlanklineIndent3",
-		"IndentBlanklineIndent4",
-		"IndentBlanklineIndent5",
-		"IndentBlanklineIndent6",
-	},
-	max_indent_increase = 1,
-	strict_tabs = true,
-	-- vim.opt.listchars:append("space:⋅"),
+	indent = { highlight = highlight },
 })

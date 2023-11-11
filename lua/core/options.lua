@@ -6,6 +6,8 @@ vim.opt.termguicolors = true
 vim.o.pumheight = 10 -- Max items to show in pop up menu
 vim.o.cmdheight = 1 -- Max items to show in command menu
 
+vim.o.relativenumber = true
+
 -- Files and Others
 vim.o.fileencoding = "utf-8" -- File Encoding
 vim.g.loaded_netrw = 1 -- Helps opening links in the internet (probabilly -_-)
@@ -40,8 +42,8 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Mouse and Scrolling
-vim.o.scrolloff = 5
-vim.o.sidescrolloff = 5
+vim.o.scrolloff = 10
+vim.o.sidescrolloff = 10
 vim.o.mouse = "a"
 
 -- Wrapping
@@ -65,8 +67,9 @@ vim.bo.autoindent = true
 vim.o.expandtab = true
 vim.bo.expandtab = true
 
-vim.opt.list = true
-vim.opt.listchars:append("eol:↴")
+-- 이거하면 느려짐
+-- vim.opt.list = true
+-- vim.opt.listchars:append("eol:↴")
 
 -- Nvim Notify
 vim.notify = require("notify")

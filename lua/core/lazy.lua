@@ -181,40 +181,40 @@ local plugins = {
 		after = "nvim-treesitter",
 		requires = "nvim-treesitter/nvim-treesitter",
 	},
-	{
-		"anuvyklack/pretty-fold.nvim",
-		config = function()
-			require("pretty-fold").setup()
-		end,
-	},
+	-- {
+	-- 	"anuvyklack/pretty-fold.nvim",
+	-- 	config = function()
+	-- 		require("pretty-fold").setup()
+	-- 	end,
+	-- },
 	{ "anuvyklack/keymap-amend.nvim" },
-	{
-		"anuvyklack/fold-preview.nvim",
-		requires = "anuvyklack/keymap-amend.nvim",
-		config = function()
-			local fp = require("fold-preview")
-			local map = require("fold-preview").mapping
-			local keymap = vim.keymap
-			keymap.amend = require("keymap-amend")
-
-			fp.setup({
-				default_keybindings = false,
-				-- another settings
-				border = "double",
-			})
-
-			keymap.amend("n", "zk", function(original)
-				if not fp.show_preview() then
-					original()
-				end
-				-- or
-				-- if not fp.toggle_preview() then original() end
-				-- to close preview on second press on K.
-			end)
-			keymap.amend("n", "h", map.close_preview_open_fold)
-			keymap.amend("n", "l", map.close_preview_open_fold)
-		end,
-	},
+	-- {
+	-- 	"anuvyklack/fold-preview.nvim",
+	-- 	requires = "anuvyklack/keymap-amend.nvim",
+	-- 	config = function()
+	-- 		local fp = require("fold-preview")
+	-- 		local map = require("fold-preview").mapping
+	-- 		local keymap = vim.keymap
+	-- 		keymap.amend = require("keymap-amend")
+	--
+	-- 		fp.setup({
+	-- 			default_keybindings = false,
+	-- 			-- another settings
+	-- 			border = "double",
+	-- 		})
+	--
+	-- 		keymap.amend("n", "zk", function(original)
+	-- 			if not fp.show_preview() then
+	-- 				original()
+	-- 			end
+	-- 			-- or
+	-- 			-- if not fp.toggle_preview() then original() end
+	-- 			-- to close preview on second press on K.
+	-- 		end)
+	-- 		keymap.amend("n", "h", map.close_preview_open_fold)
+	-- 		keymap.amend("n", "l", map.close_preview_open_fold)
+	-- 	end,
+	-- },
 	{
 		"diepm/vim-rest-console",
 	},
@@ -246,7 +246,27 @@ local plugins = {
 		end,
 	},
 	{ "RRethy/vim-illuminate" },
-	{ "fatih/vim-go" },
+	{
+		"kevinhwang91/nvim-ufo",
+		event = "BufRead",
+		dependencies = {
+			{ "kevinhwang91/promise-async" },
+			{
+				"luukvbaal/statuscol.nvim",
+			},
+		},
+		config = function()
+			-- Fold options
+			vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+			vim.o.foldcolumn = "1" -- '0' is not bad
+			vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+			vim.o.foldlevelstart = 99
+			vim.o.foldenable = true
+
+			require("ufo").setup()
+		end,
+	},
+	-- { "fatih/vim-go" },
 	-- ==============================================================
 	--
 	--

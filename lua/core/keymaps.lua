@@ -67,10 +67,12 @@ local terminal = require("nvterm.terminal")
 
 -- terminal
 local toggle_modes = { "n", "t" }
+
 local mappings = {
 	{
 		toggle_modes,
-		"<M-j>",
+		"<Leader>j",
+		-- "<M-j>", command + j 로 열고싶은데..
 		function()
 			terminal.toggle("horizontal")
 		end,
