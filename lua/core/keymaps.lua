@@ -87,6 +87,11 @@ end
 -- signature help
 
 local lsp_signature = require("lsp_signature")
+
 vim.keymap.set({ "i" }, "<C-k>", function()
+	lsp_signature.toggle_float_win()
+end, { silent = true, noremap = true, desc = "toggle signature" })
+
+vim.keymap.set({ "n", "i" }, "˚", function()
 	lsp_signature.toggle_float_win()
 end, { silent = true, noremap = true, desc = "toggle signature" })
