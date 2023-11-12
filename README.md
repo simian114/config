@@ -1,10 +1,13 @@
 # nvim
 
 ## lazygit 설정
+
 > [nvim lazygit](https://github.com/kdheepak/lazygit.nvim) 에서 `Using neovim-remote` 항목 가이드 참고. 해당 항목을 완전 동일하게 따라가면 파일 edit / open 에 버그 존재.
+
 - 위 참고 링크를 따라 neovim-remote 설치
 - 4번 항목의 vimrc 는 vimrc.vim 파일에 있음
 - zshrc
+
   - ```
     if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
       alias nvim=nvr -cc split --remote-wait +'set bufhidden=wipe'
@@ -21,6 +24,7 @@
     alias vi="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#I.#P').pipe"
     alias v="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#I.#P').pipe"
     ```
+
 - LazyGitConfig (Neovim 에서 `LazyGitConfig` 명령어 실행)
   - ```
     os:
@@ -30,6 +34,7 @@
     ```
 
 ## iterm2 설정
+
 > 자동완성 리스트 토글
 
 1. preferenes
@@ -39,5 +44,8 @@
 5. ![Screenshot 2023-09-07 at 11 33 17 PM](https://github.com/simian114/nvim/assets/49119625/3e01ffc2-6eab-43ef-a12d-51c53a533921)
 6. opt + esc 로 ¡ send
 
+cmd + k = ˚ 로 설정 (opt + k 하면 나옴)
+
 ## tmux 설정
+
 - 티먹스 프리셋값을 ctrl + p 로 설정해야함
