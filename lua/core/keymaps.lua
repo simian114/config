@@ -83,3 +83,10 @@ local opts = { noremap = true, silent = true }
 for _, mapping in ipairs(mappings) do
 	vim.keymap.set(mapping[1], mapping[2], mapping[3], opts)
 end
+
+-- signature help
+
+local lsp_signature = require("lsp_signature")
+vim.keymap.set({ "i" }, "<C-k>", function()
+	lsp_signature.toggle_float_win()
+end, { silent = true, noremap = true, desc = "toggle signature" })
