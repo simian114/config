@@ -55,7 +55,11 @@ map("n", "sj", "<C-w>j", { noremap = true, silent = false })
 map("n", "sk", "<C-w>k", { noremap = true, silent = false })
 map("n", "sl", "<C-w>l", { noremap = true, silent = false })
 
+-- quic
 map("n", "sq", "<cmd>q<cr>", { noremap = true, silent = false })
+
+-- no highlight
+map("n", "sn", "<cmd>noh<cr>", { noremap = true, silent = false })
 
 -- Go to prev
 map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })

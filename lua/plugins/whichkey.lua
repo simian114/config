@@ -107,6 +107,7 @@ local normalMappings = {
 	-- Lsp Stuffs
 	s = {
 		name = "LSP",
+		s = { ":w<CR>", "Save File" },
 		f = { "<cmd> Lspsaga finder <CR>", "floating finder" },
 		i = { ":LspInfo<cr>", "Connected Language Servers" },
 		k = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
