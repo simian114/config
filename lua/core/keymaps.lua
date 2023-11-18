@@ -1,12 +1,8 @@
 vim.g.mapleader = " "
 
-local map = vim.api.nvim_set_keymap
--- Toggle between tabs
-map("n", "<C-h>", "<C-w>h", { noremap = true, silent = false })
-map("n", "<C-j>", "<C-w>j", { noremap = true, silent = false })
-map("n", "<C-k>", "<C-w>k", { noremap = true, silent = false })
-map("n", "<C-l>", "<C-w>l", { noremap = true, silent = false })
+local neoscroll = require("neoscroll")
 
+local map = vim.api.nvim_set_keymap
 -- BufferLine
 map("n", "<Tab>", ":BufferLineCycleNext<cr>", { noremap = true, silent = true })
 map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>", { noremap = true, silent = true })
@@ -49,8 +45,29 @@ map("n", "g.", "<cmd> Lspsaga diagnostic_jump_next <CR>", { noremap = true, sile
 map("n", "gm", "<cmd> Lspsaga diagnostic_jump_prev <CR>", { noremap = true, silent = false })
 map("n", "K", "<cmd> Lspsaga hover_doc <CR>", { noremap = true, silent = false })
 
+-- split pane
+map("n", "sv", "<cmd>vsplit<CR>", { noremap = true, silent = false })
+map("n", "sb", "<cmd>split<cr>", { noremap = true, silent = true })
+
+-- Toggle between tabs
+map("n", "sh", "<C-w>h", { noremap = true, silent = false })
+map("n", "sj", "<C-w>j", { noremap = true, silent = false })
+map("n", "sk", "<C-w>k", { noremap = true, silent = false })
+map("n", "sl", "<C-w>l", { noremap = true, silent = false })
+
+map("n", "sq", "<cmd>q<cr>", { noremap = true, silent = false })
+
 -- Go to prev
 map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })
+
+-- move
+vim.keymap.set({ "n" }, "su", function()
+	neoscroll.scroll(-vim.wo.scroll, true, 150)
+end)
+
+vim.keymap.set({ "n" }, "sd", function()
+	neoscroll.scroll(vim.wo.scroll, true, 150)
+end)
 
 -- Terminate Terminal mode
 -- map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })

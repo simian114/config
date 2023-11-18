@@ -171,7 +171,7 @@ local plugins = {
 	{ "chentoast/marks.nvim" },
 	{ "famiu/bufdelete.nvim" },
 	{ "karb94/neoscroll.nvim" },
-	{ "ggandor/leap.nvim" },
+	-- { "ggandor/leap.nvim" },
 	-- {
 	-- 	"Exafunction/codeium.vim",
 	-- 	event = "BufEnter",
@@ -181,40 +181,7 @@ local plugins = {
 		after = "nvim-treesitter",
 		requires = "nvim-treesitter/nvim-treesitter",
 	},
-	-- {
-	-- 	"anuvyklack/pretty-fold.nvim",
-	-- 	config = function()
-	-- 		require("pretty-fold").setup()
-	-- 	end,
-	-- },
 	{ "anuvyklack/keymap-amend.nvim" },
-	-- {
-	-- 	"anuvyklack/fold-preview.nvim",
-	-- 	requires = "anuvyklack/keymap-amend.nvim",
-	-- 	config = function()
-	-- 		local fp = require("fold-preview")
-	-- 		local map = require("fold-preview").mapping
-	-- 		local keymap = vim.keymap
-	-- 		keymap.amend = require("keymap-amend")
-	--
-	-- 		fp.setup({
-	-- 			default_keybindings = false,
-	-- 			-- another settings
-	-- 			border = "double",
-	-- 		})
-	--
-	-- 		keymap.amend("n", "zk", function(original)
-	-- 			if not fp.show_preview() then
-	-- 				original()
-	-- 			end
-	-- 			-- or
-	-- 			-- if not fp.toggle_preview() then original() end
-	-- 			-- to close preview on second press on K.
-	-- 		end)
-	-- 		keymap.amend("n", "h", map.close_preview_open_fold)
-	-- 		keymap.amend("n", "l", map.close_preview_open_fold)
-	-- 	end,
-	-- },
 	{
 		"diepm/vim-rest-console",
 	},

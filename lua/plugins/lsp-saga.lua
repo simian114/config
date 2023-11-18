@@ -22,7 +22,7 @@ LspSaga.setup({
 	finder_reference_icon = "  ",
 	max_preview_lines = 10,
 	finder_action_keys = {
-		open = "o",
+		open = "e",
 		vsplit = "s",
 		split = "i",
 		quit = "q",
@@ -36,7 +36,7 @@ LspSaga.setup({
 
 	definition = {
 		keys = {
-			edit = "o",
+			edit = "e",
 		},
 	},
 	-- light bulb

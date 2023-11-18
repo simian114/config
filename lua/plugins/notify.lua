@@ -12,4 +12,5 @@ NvimNotify.setup({
 	stages = "fade",
 	timeout = 2000,
 	fps = 60,
+	render = "compact",
 })

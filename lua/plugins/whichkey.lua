@@ -80,7 +80,6 @@ local normalMappings = {
 	-- Telescope
 	f = {
 		name = "Telescope",
-		-- f = { ":Telescope find_files theme=ivy<cr>", "Telescope find_files" },
 		f = { ":Telescope find_files theme=ivy<cr>", "Telescope find_files" },
 		d = { ":Telescope current_buffer_fuzzy_find theme=ivy<cr>", "Fuzzy Find in File" },
 		o = { ":Telescope oldfiles theme=ivy<cr>", "Telescope oldfiles" },
@@ -89,14 +88,12 @@ local normalMappings = {
 		r = { ":Telescope resume theme=ivy<cr>", "Telescope resume" },
 		b = { ":Telescope buffers theme=ivy<cr>", "Telescope buffers" },
 	},
-	-- Split
-	v = { ":vsplit<cr>", "Split Vertically" },
-	h = { ":split<cr>", "Split Horizontally" },
 
 	-- Terminal
 	t = {
 		s = { ":TSToggle highlight<cr>", "Toggle highlight" },
 		a = { ":SymbolsOutline<cr>", "Toggle Aerial" },
+		b = { ":DBUIToggle<cr>", "Toggle DBUI" },
 		-- f = { toggle_float, "Floating Terminal" },
 		-- l = { toggle_lazygit, "LazyGit" },
 	},
@@ -110,7 +107,6 @@ local normalMappings = {
 	-- Lsp Stuffs
 	s = {
 		name = "LSP",
-		s = { ":w<cr>", "Save File" },
 		f = { "<cmd> Lspsaga finder <CR>", "floating finder" },
 		i = { ":LspInfo<cr>", "Connected Language Servers" },
 		k = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature Help" },
