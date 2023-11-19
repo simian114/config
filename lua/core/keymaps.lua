@@ -73,6 +73,9 @@ vim.keymap.set({ "n" }, "sd", function()
 	neoscroll.scroll(vim.wo.scroll, true, 150)
 end)
 
+vim.keymap.set({ "n" }, "sf", function()
+	neoscroll.scroll(vim.wo.scroll, true, 150)
+end)
 -- Terminate Terminal mode
 -- map("t", "<C-d>", [[<C-\><C-n>]], { noremap = true })
 
