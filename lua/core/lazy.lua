@@ -81,6 +81,7 @@ local plugins = {
 		tag = "0.1.1",
 		dependencies = {
 			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			{ "kdheepak/lazygit.nvim" },
 		},
 		config = function()

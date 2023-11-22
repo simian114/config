@@ -63,11 +63,15 @@ Cmp.setup({
 	}), -- end of mapping section
 
 	-- Managing Sources for completions
-	sources = Cmp.config.sources({
-		{ name = "nvim_lsp" },
-		{ name = "luasnip" }, -- For luasnip users.
+	sources = Cmp.config.sources(
+		{
+			{ name = "nvim_lsp" },
+			{ name = "luasnip" }, -- For luasnip users.
+			{ name = "buffer" },
+			{ name = "path" },
+		}
 		-- { name = "codeium" }, -- For Codeium
-	}, { { name = "buffer" } }),
+	),
 
 	formatting = {
 		format = LspKind.cmp_format({
