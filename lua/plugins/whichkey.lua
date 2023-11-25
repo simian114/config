@@ -189,7 +189,7 @@ local terminalOpts = { prefix = "<leader>", mode = "t" }
 
 --#region
 wk.setup({
-	triggers = { "'", "`", '"', "<leader>", "z", "<C-w>", "g" },
+	-- triggers = { "'", "`", '"', "<leader>", "z", "<C-w>", "g" },
 	window = {
 		position = "top",
 		border = "double",

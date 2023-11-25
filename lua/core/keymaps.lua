@@ -119,3 +119,15 @@ end, { silent = true, noremap = true, desc = "toggle signature" })
 vim.keymap.set({ "n", "i" }, "˚", function()
 	lsp_signature.toggle_float_win()
 end, { silent = true, noremap = true, desc = "toggle signature" })
+
+-- fine cmdline
+map("n", "<CR>", "<cmd>FineCmdline<CR>", { noremap = true })
+-- map("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
+
+local ft_cmds = {
+	go = "go run ./cmd/api" .. vim.fn.expand("%"),
+}
+
+vim.keymap.set({ "n" }, "<leader>tt", function()
+	require("nvterm.terminal").send(ft_cmds[vim.bo.filetype])
+end, { silent = true, noremap = true, desc = "toggle signature" })
