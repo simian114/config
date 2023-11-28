@@ -65,15 +65,15 @@ map("n", "sn", "<cmd>noh<cr>", { noremap = true, silent = false })
 map("n", "gG", "<C-o> <CR>", { noremap = true, silent = false })
 
 -- move
-vim.keymap.set({ "n" }, "su", function()
+vim.keymap.set({ "n", "v" }, "su", function()
 	neoscroll.scroll(-vim.wo.scroll, true, 150)
 end)
 
-vim.keymap.set({ "n" }, "sd", function()
+vim.keymap.set({ "n", "v" }, "sd", function()
 	neoscroll.scroll(vim.wo.scroll, true, 150)
 end)
 
-vim.keymap.set({ "n" }, "sf", function()
+vim.keymap.set({ "n", "v" }, "sf", function()
 	neoscroll.scroll(vim.wo.scroll, true, 150)
 end)
 -- Terminate Terminal mode
