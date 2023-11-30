@@ -1,16 +1,16 @@
 -- Appearance
-vim.o.background = "dark" -- or "light" for light mode
+vim.o.background = "dark"        -- or "light" for light mode
 vim.cmd("let g:gruvbox_contrast_dark = 'hard'")
 vim.cmd([[colorscheme gruvbox]]) -- Set color scheme
 vim.opt.termguicolors = true
-vim.o.pumheight = 10 -- Max items to show in pop up menu
-vim.o.cmdheight = 1 -- Max items to show in command menu
+vim.o.pumheight = 10             -- Max items to show in pop up menu
+vim.o.cmdheight = 1              -- Max items to show in command menu
 
 vim.o.relativenumber = true
 
 -- Files and Others
 vim.o.fileencoding = "utf-8" -- File Encoding
-vim.g.loaded_netrw = 1 -- Helps opening links in the internet (probabilly -_-)
+vim.g.loaded_netrw = 1       -- Helps opening links in the internet (probabilly -_-)
 vim.g.loaded_netrwPlugin = 1
 vim.opt.autochdir = false
 vim.cmd("filetype plugin indent on")
@@ -28,7 +28,8 @@ vim.o.showmode = false
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.updatetime = 300
-vim.o.timeoutlen = 1000
+vim.o.timeoutlen = 50
+-- vim.o.timeoutlen = 1000
 
 -- clipboard
 vim.o.clipboard = "unnamedplus"
