@@ -6,6 +6,7 @@ local map = vim.api.nvim_set_keymap
 -- BufferLine
 map("n", "<Tab>", ":BufferLineCycleNext<cr>", { noremap = true, silent = true })
 map("n", "<S-Tab>", ":BufferLineCyclePrev<cr>", { noremap = true, silent = true })
+
 map("n", "<Leader>1", "<CMD>BufferLineGoToBuffer 1<CR>", { noremap = true, silent = true })
 map("n", "<Leader>2", "<CMD>BufferLineGoToBuffer 2<CR>", { noremap = true, silent = true })
 map("n", "<Leader>3", "<CMD>BufferLineGoToBuffer 3<CR>", { noremap = true, silent = true })
@@ -34,7 +35,6 @@ map("n", "kj", "<Esc>", { noremap = true, silent = false })
 map("v", "kj", "<Esc>", { noremap = true, silent = false })
 
 map("i", "¡", "<C-\\> <CR>", { noremap = true, silent = false })
-
 -- saga
 
 map("n", "gd", "<cmd>mark A <CR> <cmd> Lspsaga goto_definition <CR>", { noremap = true, silent = false })
@@ -95,8 +95,8 @@ local toggle_modes = { "n", "t" }
 local mappings = {
 	{
 		toggle_modes,
-		"<Leader>j",
-		-- "<M-j>", command + j 로 열고싶은데..
+		-- "<Leader>j",
+		"<M-j>",
 		function()
 			terminal.toggle("horizontal")
 		end,
@@ -131,3 +131,14 @@ local ft_cmds = {
 vim.keymap.set({ "n" }, "<leader>tt", function()
 	require("nvterm.terminal").send(ft_cmds[vim.bo.filetype])
 end, { silent = true, noremap = true, desc = "toggle signature" })
+
+-- buffer move when input mode
+map("i", "®", "<cmd>BufferLineCycleNext<cr>", { noremap = true, silent = true })
+map("i", "œ", "<cmd>BufferLineCyclePrev<cr>", { noremap = true, silent = true })
+map("n", "®", "<cmd>BufferLineCycleNext<cr>", { noremap = true, silent = true })
+map("n", "œ", "<cmd>BufferLineCyclePrev<cr>", { noremap = true, silent = true })
+
+map("i", "∂", "<End>", { noremap = true, silent = true })
+map("i", "å", "<Home>", { noremap = true, silent = true })
+map("n", "∂", "<End>", { noremap = true, silent = true })
+map("n", "å", "<Home>", { noremap = true, silent = true })

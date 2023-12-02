@@ -39,7 +39,7 @@ local toggle_git_diff = function()
 	elseif vim.bo.filetype == "DiffviewFileHistory" then
 		vim.cmd([[DiffviewClose]])
 	else
-		vim.cmd([[DiffviewOpen]])
+		vim.cmd([[DiffviewFileHistory %]])
 	end
 end
 
@@ -151,9 +151,9 @@ local normalMappings = {
 			"reset hunk",
 		},
 
-		g = { toggle_git_diff, "open git diff" },
+		g = { "<cmd>DiffviewFileHistory %<CR>", "toggle git current file history diff" },
 		o = { edit_file, "goto file in diff" },
-		h = { "<cmd>DiffviewFileHistory <CR>", "toggle git history diff" },
+		h = { "<cmd>DiffviewFileHistory<CR>", "toggle git all file history diff" },
 		c = { "<cmd>DiffviewClose <CR>", "toggle git history diff" },
 		l = { ":LazyGit<CR>", "Open LazyGit" },
 	},
