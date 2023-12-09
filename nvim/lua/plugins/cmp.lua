@@ -56,8 +56,14 @@ Cmp.setup({
 		["<C-b>"] = Cmp.mapping.scroll_docs(0),
 		["<C-f>"] = Cmp.mapping.scroll_docs(4),
 		["<C-\\>"] = Cmp.mapping.complete(),
+		["<Tab>"] = Cmp.mapping(function(fallback)
+			Cmp.select_next_item()
+		end, { "i", "s" }),
+		["<S-Tab>"] = Cmp.mapping(function(fallback)
+			Cmp.select_prev_item()
+		end, { "i", "s" }),
 		["<C-;>"] = Cmp.mapping.complete(),
-		["¡"] = Cmp.mapping.complete(),
+		["¡"] = Cmp.mapping.complete(), -- 자동완성 보여주기
 		["<C-e>"] = Cmp.mapping.abort(),
 		["<CR>"] = Cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 	}), -- end of mapping section
