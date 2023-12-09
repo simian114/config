@@ -1,0 +1,73 @@
+{
+  "title": "sanam's Prevent command + h / m and open app",
+  "maintainers": ["sanam"],
+  "author": "simian114@gmail.com",
+  "rules": [
+    {
+      "description": "Open iTerm2 with Command + h",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"iTerm 2\" to activate'"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'iTerm 2'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Open iterm2 with Command + m",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -e 'tell application \"iTerm 2\" to activate'"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["left_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'iTerm 2'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
