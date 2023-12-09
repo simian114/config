@@ -95,8 +95,7 @@ local toggle_modes = { "n", "t" }
 local mappings = {
 	{
 		toggle_modes,
-		-- "<Leader>j",
-		"<M-j>",
+		"∆",
 		function()
 			terminal.toggle("horizontal")
 		end,
