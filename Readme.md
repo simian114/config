@@ -25,6 +25,10 @@ ln -s /Users/mac/Desktop/personal/config/nvim ~/.config/nvim
 ln -s /Users/mac/Desktop/personal/config/karabiner ~/.config/karabiner/assets/complex_modifications
 ```
 
-## InputSourceToABC
+## raycast
 
-> 특정 프로그램 실행 시 input source 를 영어로 바꿔준다. alfred 같은 프로그램에 상당히 유용
+> spotlight / alfred 같은 프로그램
+
+1. [raycast](https://www.raycast.com/) 다운로드
+2. 깃헙 계정 로그인
+3. 최신 setting import
