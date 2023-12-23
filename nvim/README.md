@@ -1,4 +1,13 @@
 # nvim
+## golang 디버깅
+> [go-delve](https://github.com/go-delve/delve) 를 설치해야함
+gopath 등록
+```
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/Cellar/go/1.12.7/libexec
+export PATH=$GOPATH/bin:$PATH
+export PATH=$PATH:$GOROOT/bin
+```
 
 ## lazygit 설정
 
