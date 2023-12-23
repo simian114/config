@@ -103,6 +103,17 @@ local normalMappings = {
 		end,
 		"comment",
 	},
+	-- dap
+	d = {
+		b = { "<cmd> DapToggleBreakpoint<cr>", "Toggle breakpoint" },
+		t = { "<cmd>DapUiToggle <CR>", "Open debugging sidebar" },
+		s = {
+			function()
+				require("dap").continue()
+			end,
+			"Debug go test",
+		},
+	},
 
 	-- Lsp Stuffs
 	s = {

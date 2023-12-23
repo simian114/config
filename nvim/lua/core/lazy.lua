@@ -128,7 +128,17 @@ local plugins = {
 
 	-- lspkind for icons with snipits
 	{ "onsails/lspkind.nvim" },
-
+	-- dap
+	{ "mfussenegger/nvim-dap" },
+	{
+		"leoluz/nvim-dap-go",
+		ft = "go",
+		dependencies = "mfussenegger/nvim-dap",
+		config = function(_, opts)
+			require("dap-go").setup(opts)
+		end,
+	},
+	{ "rcarriga/nvim-dap-ui" },
 	-- Managing Mason
 	{ "williamboman/mason.nvim" },
 	{ "williamboman/mason-lspconfig.nvim" },

@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
 local neoscroll = require("neoscroll")
+local dap = require("dap")
 
 local map = vim.api.nvim_set_keymap
 -- BufferLine
@@ -119,10 +120,6 @@ vim.keymap.set({ "n", "i" }, "˚", function()
 	lsp_signature.toggle_float_win()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
--- fine cmdline
-map("n", "<CR>", "<cmd>FineCmdline<CR>", { noremap = true })
--- map("n", ":", "<cmd>FineCmdline<CR>", { noremap = true })
-
 local ft_cmds = {
 	go = "go run ./cmd/api" .. vim.fn.expand("%"),
 }
@@ -141,3 +138,9 @@ map("i", "∂", "<End>", { noremap = true, silent = true })
 map("i", "å", "<Home>", { noremap = true, silent = true })
 map("n", "∂", "<End>", { noremap = true, silent = true })
 map("n", "å", "<Home>", { noremap = true, silent = true })
+
+-- dap
+vim.keymap.set("n", "<F5>", require("dap").continue)
+vim.keymap.set("n", "<F10>", require("dap").step_over)
+vim.keymap.set("n", "<F11>", require("dap").step_into)
+vim.keymap.set("n", "<F12>", require("dap").step_out)
