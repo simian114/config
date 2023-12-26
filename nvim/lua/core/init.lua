@@ -1,3 +1,7 @@
 require("core.lazy")
 require("core.keymaps")
-require("core.options")
+
+if vim.g.vscode then
+else
+	require("core.options")
+end
