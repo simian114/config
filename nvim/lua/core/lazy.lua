@@ -29,6 +29,20 @@ if vim.g.vscode then
 			},
 		},
 		{ "karb94/neoscroll.nvim" },
+		{
+			"nvim-treesitter/nvim-treesitter",
+			build = ":TSUpdate",
+			event = { "BufReadPre", "BufNewFile" },
+			-- event = "bufWinEnter",
+			dependencies = {
+				"JoosepAlviste/nvim-ts-context-commentstring",
+			},
+		},
+		{
+			"nvim-treesitter/nvim-treesitter-textobjects",
+			after = "nvim-treesitter",
+			requires = "nvim-treesitter/nvim-treesitter",
+		},
 	}
 
 	local opts = {}

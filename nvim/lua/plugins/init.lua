@@ -1,5 +1,6 @@
 if vim.g.vscode then
 	require("plugins.vscode-init")
+	require("plugins.treesitter")
 else
 	require("plugins.alpha-nvim")
 	require("plugins.autopairs")
