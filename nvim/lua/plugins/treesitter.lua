@@ -116,7 +116,7 @@ TreeSitter.setup({
 				["al"] = { query = "@loop.outer", desc = "Select outer loop" },
 				["il"] = { query = "@loop.inner", desc = "Select inner loop" },
 				["at"] = { query = "@comment.outer", desc = "Select outer comment" },
-				["it"] = { query = "@comment.outer", desc = "Select inner comment" },
+				["it"] = { query = "@comment.inner", desc = "Select inner comment" },
 				-- ["ac"] = "@class.outer",
 				-- You can optionally set descriptions to the mappings (used in the desc parameter of
 				-- nvim_buf_set_keymap) which plugins like which-key display
