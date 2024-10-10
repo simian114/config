@@ -1,0 +1,22 @@
+# pet
+# 터미널용 스니펫
+# https://github.com/knqyf263/pet
+
+
+
+function prev() {
+    PREV=$( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac --height "50%" | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+    [[ "$PREV" = "" ]] && echo "canceled" && return
+    sh -c "pet new `printf %q "$PREV"`"
+}
+
+function pet-select() {
+    BUFFER=$(pet search --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle redisplay
+}
+
+zle -N pet-select
+stty -ixon
+bindkey '^s' pet-select
+

@@ -1,0 +1,83 @@
+# Run git.sh on zsh startup
+function delete-branches() {
+  git branch |
+    grep --invert-match '\*' |
+    cut -c 3- |
+    #fzf --multi --preview="git log {} --"|
+    # fzf-tmux -p80%,80% --multi --preview="git log {} --" --height=40% |
+    fzf --multi --preview="git log {} --" --height=40% |
+    xargs git branch --delete --force
+}
+alias gbd="delete-branches"
+
+function checkout-from-issue-list() {
+  issue=$(gh issue list | fzf --height=30% | awk '{print "#" $1}')
+  git checkout -b "$issue"
+}
+alias gci="checkout-from-issue-list"
+
+function github-show-issue() {
+  issue=$(gh issue list | fzf --height=30% | awk '{print "#" $1}')
+  gh issue view "$issue"
+}
+
+alias ghvi="github-show-issue"
+
+fss() {
+  local cmd opts
+  cmd="echo {} |cut -d: -f1 |xargs -I% git stash show --color=always --ext-diff % |$forgit_diff_pager"
+  opts="
+        $FORGIT_FZF_DEFAULT_OPTS
+        +s +m -0 --tiebreak=index
+        --preview=\"$cmd\"
+        $FORGIT_STASH_FZF_OPTS
+    "
+  index=$(git stash list |
+    FZF_DEFAULT_OPTS="$opts" fzf |
+    cat | awk '{print $1}' |
+    sed 's/stash@{//g' | sed 's/}://g')
+  local num
+  echo "명령어 선택"
+  echo "${CYAN}[0] show"
+  echo "${CYAN}[1] drop"
+  echo "${CYAN}[2] pop"
+  echo "${CYAN}[3] apply"
+  read num"?> "
+  if [ $num = 0 ]; then
+    cmd="show"
+  elif [ $num = 1 ]; then
+    cmd="drop"
+  elif [ $num = 2 ]; then
+    cmd="pop"
+  elif [ $num = 3 ]; then
+    cmd="apply"
+  else
+    echo "invalid input"
+    return
+  fi
+  git stash ${cmd} ${index}
+}
+
+
+export E="\e["
+export RED="${E}31m"
+export CYAN="${E}36m"
+export END="${E}0m"
+export B_WHITE="\033[40;37;7m"
+
+# git alias
+# alias ga='git add'
+alias gs='git status'
+alias gm='git commit'
+# alias gcb='git checkout -b'
+# alias gcm='git checkout master'
+# alias gh='git chekcout'
+# alias gb='git branch'
+# alias gbd='git branch -D'
+alias gp='git pull origin '
+alias gpm='git pull origin master'
+alias gsu='git stash -u'
+alias gsp='git stash pop'
+# alias gsl='git stash list'
+# alias gss='git stash show'
+

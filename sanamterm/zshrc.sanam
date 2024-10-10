@@ -1,0 +1,13 @@
+alias ctags="$(brew --prefix)/bin/ctags"
+
+# git
+source ~/config/sanamterm/zshrc.git
+
+# nvim
+source ~/config/sanamterm/zshrc.nvim
+
+# pet
+source ~/config/sanamterm/zshrc.pet
+
+alias cl="clear"
+alias c="z"

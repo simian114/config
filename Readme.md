@@ -2,7 +2,13 @@
 
 ## iterm2
 
-iterm2 설치 후 profile 을 적용한다.
+iterm2 설치 후 sanamterm 의 설정 적용
+
+```sh
+sh init.sh
+
+sh symlink.sh
+```
 
 ## tmux
 
@@ -11,7 +17,7 @@ iterm2 설치 후 profile 을 적용한다.
 아래처럼 링크시킨다.
 
 ```sh
-ln -s /Users/mac/Desktop/personal/config/nvim ~/.config/nvim
+ln -s ~/config/nvim ~/.config/nvim
 ```
 
 ## karabiner
