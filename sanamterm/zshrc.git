@@ -16,6 +16,18 @@ function checkout-from-issue-list() {
 }
 alias gci="checkout-from-issue-list"
 
+function checkout-from-branch-list() {
+   if [[ -n "$1" ]]; then
+      git checkout -t $(git branch -r | fzf)
+   else
+      git checkout $(git branch | fzf)
+   fi
+}
+
+alias gco="checkout-from-branch-list"
+alias gcor="checkout-from-branch-list r"
+
+
 function github-show-issue() {
   issue=$(gh issue list | fzf --height=30% | awk '{print "#" $1}')
   gh issue view "$issue"
